@@ -1,5 +1,5 @@
 gem 'minitest'
-require 'minitest'
+require 'minitest/autorun'
 require 'minitest/pride'
 
 class FindFirstOneTest < Minitest::Test
@@ -44,6 +44,28 @@ class FindFirstOneTest < Minitest::Test
     # write code here
 
     assert_equal unicorn4.object_id, found.object_id
+  end
+
+  Gnome = Struct.new(:type) do
+    def roving?
+      type == 'roving'
+    end
+  end
+
+  def test_first_roving_gnome
+    skip
+    gnome1 = Gnome.new('forest')
+    gnome2 = Gnome.new('roving')
+    gnome3 = Gnome.new('snorkeling')
+    gnome4 = Gnome.new('evil')
+    gnome5 = Gnome.new('roving')
+
+    gnomes = [gnome1, gnome2, gnome3, gnome4, gnome5]
+
+    # write code here
+
+    assert_equal gnome2.object_id, found.object_id
+
   end
 end
 

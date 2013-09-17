@@ -1,14 +1,12 @@
 gem 'minitest'
-require 'minitest'
+require 'minitest/autorun'
 require 'minitest/pride'
 
 class TransformCollectionTest < Minitest::Test
   def test_capitalize
     names = %w(alice bob charlie)
     capitalized_names = []
-    names.each do |name|
-      # write code here
-    end
+    # write code here
     assert_equal %w(Alice Bob Charlie), capitalized_names
   end
 
@@ -46,5 +44,13 @@ class TransformCollectionTest < Minitest::Test
     # write code here
     assert_equal %w(ecila bob eilrahc divad eve), backwards
   end
+
+  def test_words_with_no_vowels
+    skip
+    words = %w(green sheep travel least boat)
+    # write code here
+    assert_equal %w(grn shp trvl lst bt), without_vowels
+  end
+
 end
 

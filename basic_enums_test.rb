@@ -1,5 +1,5 @@
 gem 'minitest'
-require 'minitest'
+require 'minitest/autorun'
 require 'minitest/pride'
 
 class BasicEnumsTest < Minitest::Test
@@ -18,5 +18,14 @@ class BasicEnumsTest < Minitest::Test
     # write code here
     assert_equal 15, sum
   end
+
+  def test_max_value
+    skip
+    max_num = 0
+    numbers = [2, 16, 6, 50, 12]
+    # write code here
+    assert_equal 50, max_num
+  end
+  
 end
 

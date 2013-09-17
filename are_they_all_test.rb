@@ -1,5 +1,5 @@
 gem 'minitest'
-require 'minitest'
+require 'minitest/autorun'
 require 'minitest/pride'
 
 class AreTheyAllTest < Minitest::Test
@@ -46,6 +46,13 @@ class AreTheyAllTest < Minitest::Test
     words = ["full", "", "", "", "", ""]
     # write code here
     refute all_empty
+  end
+
+  def test_all_uppercase
+    skip
+    words = %w(DOUGHNUT CASH MAIN bOWl SMACK SAND)
+    # write code here
+    refute all_uppercase
   end
 end
 

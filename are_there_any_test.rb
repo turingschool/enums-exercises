@@ -1,5 +1,5 @@
 gem 'minitest'
-require 'minitest'
+require 'minitest/autorun'
 require 'minitest/pride'
 
 class AreThereAnyTest < Minitest::Test
@@ -38,6 +38,13 @@ class AreThereAnyTest < Minitest::Test
     names = %w(bill bob burton alice brandon)
     # write code here
     assert has_alice
+  end
+
+  def test_has_full_name
+    skip
+    names = ['will', 'tom', 'bob jones', 'sam' 'linda']
+    # write code here
+    assert test_has_full_name
   end
 end
 

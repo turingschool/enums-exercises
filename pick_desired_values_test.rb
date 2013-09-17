@@ -1,5 +1,5 @@
 gem 'minitest'
-require 'minitest'
+require 'minitest/autorun'
 require 'minitest/pride'
 
 class PickDesiredValuesTest < Minitest::Test
@@ -45,6 +45,13 @@ class PickDesiredValuesTest < Minitest::Test
     words = %w(drought singing hat shoehorning purposeful)
     # write code here
     assert_equal %w(singing shoehorning), selected
+  end
+
+  def test_select_all_colors
+    skip
+    words = %w(four red green blue pizza purple)
+    # write code here
+    assert_equal %w(red green blue purple), selected
   end
 end
 

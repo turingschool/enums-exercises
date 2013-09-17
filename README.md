@@ -16,7 +16,7 @@ $ git checkout -b make-tests-pass
 
 ## Basic Concepts
 
-See `basic_enums_test.rb` -- we will talk about using `each` to loop through a collection.
+See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop through a collection.
 
 ## Using Each
 

@@ -9,7 +9,7 @@ class FindFirstOneTest < Minitest::Test
     end
   end
 
-  def test_first_thing
+  def test_first_weird_thing
     thing1 = Thing.new('odd')
     thing2 = Thing.new('cool')
     thing3 = Thing.new('weird')

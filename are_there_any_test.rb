@@ -91,6 +91,16 @@ class AreThereAnyTest < Minitest::Test
     # write code here
     refute has_no_instances_of_Time
   end
+  
+  def test_has_a_zero_not_in_last_position
+    skip
+    numbers = [2, 9, 0, 1, 3]
+    has_zero = false
+    numbers.each do |number|
+      # write code here
+    end
+    assert has_zero
+  end
 end
 
 class AreThereAnyUsingAnyTest < Minitest::Test
@@ -99,7 +109,6 @@ class AreThereAnyUsingAnyTest < Minitest::Test
     has_zero = numbers.any? do |number|
       number.zero?
     end
-    assert has_zero
   end
 end
 

@@ -6,9 +6,7 @@ class TransformCollectionsTest < Minitest::Test
   def test_capitalize
     names = %w(alice bob charlie)
     capitalized_names = []
-    names.each do |name|
-      # write code here
-    end
+    # write code here
     assert_equal %w(Alice Bob Charlie), capitalized_names
   end
 
@@ -47,11 +45,18 @@ class TransformCollectionsTest < Minitest::Test
     assert_equal %w(ecila bob eilrahc divad eve), backwards
   end
 
+  def test_words_with_no_vowels
+    skip
+    words = %w(green sheep travel least boat)
+    # write code here
+    assert_equal %w(grn shp trvl lst bt), without_vowels
+  end
+
   def test_trim_last_letter
-  skip
-  animals = %w(dog cat mouse frog platypus)
-  #write code here
-  assert_equal %w(do ca mous fro platypu), trimmed
+    skip
+    animals = %w(dog cat mouse frog platypus)
+    #write code here
+    assert_equal %w(do ca mous fro platypu), trimmed
   end
 
 end

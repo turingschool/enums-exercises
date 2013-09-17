@@ -48,6 +48,13 @@ class FilterUnwantedValuesTest < Minitest::Test
     assert_equal %w(drought hat purposeful), remaining
   end
 
+  def test_remove_numbers
+    skip
+    array = ['cat', 'dog', 23, 56, 'aimless', 43]
+    # write code here
+    assert_equal %w(cat dog aimless), remaining
+  end
+
   def test_remove_animals_starting_with_vowels
     skip
     animals = %w(aardvark bonobo cat dog elephant)

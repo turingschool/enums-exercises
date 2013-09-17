@@ -40,6 +40,13 @@ class AreThereAnyTest < Minitest::Test
     assert has_alice
   end
 
+  def test_has_full_name
+    skip
+    names = ['will', 'tom', 'bob jones', 'sam' 'linda']
+    # write code here
+    assert test_has_full_name
+  end
+
   def test_no_monkeys
     skip
     animals = %w(elephants hippos jaguars pythons)

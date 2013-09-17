@@ -42,7 +42,7 @@ class PickDesiredValuesTest < Minitest::Test
 
   def test_pick_words_ending_in_ing
     skip
-    words = %w(drought singing hat shoehorning purposeful)
+    words = %w(bring finger drought singing hat shoehorning purposeful)
     # write code here
     assert_equal %w(singing shoehorning), selected
   end

@@ -46,5 +46,13 @@ class TransformCollectionsTest < Minitest::Test
     # write code here
     assert_equal %w(ecila bob eilrahc divad eve), backwards
   end
+
+  def test_trim_last_letter
+  skip
+  animals = %w(dog cat mouse frog platypus)
+  #write code here
+  assert_equal %w(do ca mous fro platypu), trimmed
+  end
+
 end
 

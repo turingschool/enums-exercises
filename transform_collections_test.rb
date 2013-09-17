@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class TransformCollectionTest < Minitest::Test
+class TransformCollectionsTest < Minitest::Test
   def test_capitalize
     names = %w(alice bob charlie)
     capitalized_names = []

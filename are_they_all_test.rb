@@ -48,6 +48,13 @@ class AreTheyAllTest < Minitest::Test
     refute all_empty
   end
 
+  def test_all_uppercase
+    skip
+    words = %w(DOUGHNUT CASH MAIN bOWl SMACK SAND)
+    # write code here
+    refute all_uppercase
+  end
+
   def test_all_lies
     skip
     lies = [false, false, false, false]

@@ -47,6 +47,13 @@ class PickDesiredValuesTest < Minitest::Test
     assert_equal %w(singing shoehorning), selected
   end
 
+  def test_select_all_colors
+    skip
+    words = %w(four red green blue pizza purple)
+    # write code here
+    assert_equal %w(red green blue purple), selected
+  end
+
   def test_pick_dinosaurs
     skip
     animals = %w(tyrannosaurus teacup_poodle achillesaurus ankylosaurus qingxiusaurus)

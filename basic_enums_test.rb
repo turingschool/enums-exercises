@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 class BasicEnumsTest < Minitest::Test
-  def test_many_times
+  def test_solve_for_x
     s = ''
     5.times do
       # write code here

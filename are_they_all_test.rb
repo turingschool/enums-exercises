@@ -47,5 +47,13 @@ class AreTheyAllTest < Minitest::Test
     # write code here
     refute all_empty
   end
+
+  def test_all_lies
+    skip
+    lies = [false, false, false, false]
+    # write code here
+    assert all_false
+  end
+
 end
 

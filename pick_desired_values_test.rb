@@ -46,5 +46,12 @@ class PickDesiredValuesTest < Minitest::Test
     # write code here
     assert_equal %w(singing shoehorning), selected
   end
+
+  def test_pick_dinosaurs
+    skip
+    animals = %w(tyrannosaurus teacup_poodle achillesaurus ankylosaurus qingxiusaurus)
+    #write code here
+    assert_equal %w(tyrannosaurus achillesaurus ankylosaurus qingxiusaurus), selected
+  end
 end
 

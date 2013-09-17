@@ -18,5 +18,13 @@ class BasicEnumsTest < Minitest::Test
     # write code here
     assert_equal 15, sum
   end
+
+  def test_simple_factorial
+    skip
+    sum_of_factorials = 0
+    numbers = [1, 2, 3, 4, 5]
+    # write code here
+    assert_equal 153, sum_of_factorials
+  end
 end
 

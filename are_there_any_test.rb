@@ -39,5 +39,12 @@ class AreThereAnyTest < Minitest::Test
     # write code here
     assert has_alice
   end
+
+  def test_no_monkeys
+    skip
+    animals = %w(elephants hippos jaguars pythons)
+    # write code here
+    refute has_monkeys
+  end
 end
 

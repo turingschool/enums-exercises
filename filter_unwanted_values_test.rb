@@ -47,5 +47,12 @@ class FilterUnwantedValuesTest < Minitest::Test
     # write code here
     assert_equal %w(drought hat purposeful), remaining
   end
+
+  def test_remove_animals_starting_with_vowels
+    skip
+    animals = %w(aardvark bonobo cat dog elephant)
+    # write code here
+    assert_equal %w(bonobo cat dog), remaining
+  end
 end
 

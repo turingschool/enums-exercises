@@ -5,6 +5,7 @@
 ```bash
 $ cd ~/your/project/dir
 $ git clone git@github.com:USERNAME/enums-exercises.git
+$ cd enums-exercises
 ```
 
 Create a branch so that you're not changing `master`:

@@ -5,6 +5,7 @@
 ```bash
 $ cd ~/your/project/dir
 $ git clone git@github.com:USERNAME/enums-exercises.git
+$ cd enums-exercises
 ```
 
 Create a branch so that you're not changing `master`:
@@ -13,9 +14,38 @@ Create a branch so that you're not changing `master`:
 $ git checkout -b make-tests-pass
 ```
 
+## Keeping in sync with the upstream repository
+
+`origin` is your fork of the project. We'll need to connect to the upstream repository.
+
+To do this, add a new remote named upstream that points to the JumpstartLab:
+
+```bash
+$ git remote add upstream git@github.com:JumpstartLab/enums-exercises.git
+```
+
+Then pull down the updated version of upstream:
+
+```bash
+$ git fetch upstream
+```
+
+And now make sure you're on master:
+
+```bash
+$ git checkout master
+$ git branch # should say *master
+```
+
+Make master point to the exact commit that upstream/master is pointing at:
+
+```bash
+$ git reset --hard upstream/master
+```
+
 ## Basic Concepts
 
-See `basic_enums_test.rb` -- we will talk about using `each` to loop through a collection.
+See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop through a collection.
 
 ## Using Each
 

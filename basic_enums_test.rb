@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 class BasicEnumsTest < Minitest::Test
-  def test_many_times
+  def test_solve_for_x
     s = ''
     5.times do
       # write code here
@@ -27,5 +27,12 @@ class BasicEnumsTest < Minitest::Test
     assert_equal 50, max_num
   end
   
+  def test_simple_factorial
+    skip
+    sum_of_factorials = 0
+    numbers = [1, 2, 3, 4, 5]
+    # write code here
+    assert_equal 153, sum_of_factorials
+  end
 end
 

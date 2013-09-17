@@ -42,7 +42,7 @@ class PickDesiredValuesTest < Minitest::Test
 
   def test_pick_words_ending_in_ing
     skip
-    words = %w(drought singing hat shoehorning purposeful)
+    words = %w(bring finger drought singing hat shoehorning purposeful)
     # write code here
     assert_equal %w(singing shoehorning), selected
   end
@@ -52,6 +52,13 @@ class PickDesiredValuesTest < Minitest::Test
     words = %w(four red green blue pizza purple)
     # write code here
     assert_equal %w(red green blue purple), selected
+  end
+
+  def test_pick_dinosaurs
+    skip
+    animals = %w(tyrannosaurus teacup_poodle achillesaurus ankylosaurus qingxiusaurus)
+    #write code here
+    assert_equal %w(tyrannosaurus achillesaurus ankylosaurus qingxiusaurus), selected
   end
 end
 

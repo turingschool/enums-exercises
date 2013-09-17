@@ -9,7 +9,7 @@ class FindFirstOneTest < Minitest::Test
     end
   end
 
-  def test_first_thing
+  def test_first_weird_thing
     thing1 = Thing.new('odd')
     thing2 = Thing.new('cool')
     thing3 = Thing.new('weird')
@@ -67,5 +67,27 @@ class FindFirstOneTest < Minitest::Test
     assert_equal gnome2.object_id, found.object_id
 
   end
+
+  Squid = Struct.new(:size) do
+    def giant?
+      size == 'giant'
+    end
+  end
+
+  def test_first_giant_squid
+    skip
+    squid1 = Squid.new('tiny')
+    squid2 = Squid.new('inky')
+    squid3 = Squid.new('giant')
+    squid4 = Squid.new('deep sea')
+    squid5 = Squid.new('giant')
+
+    squiddies = [squid1, squid2, squid3, squid4, squid5]
+
+    # write code here
+
+    assert_equal squid3.object_id, found.object_id
+  end
+
 end
 

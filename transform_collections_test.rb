@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class TransformCollectionTest < Minitest::Test
+class TransformCollectionsTest < Minitest::Test
   def test_capitalize
     names = %w(alice bob charlie)
     capitalized_names = []
@@ -50,6 +50,13 @@ class TransformCollectionTest < Minitest::Test
     words = %w(green sheep travel least boat)
     # write code here
     assert_equal %w(grn shp trvl lst bt), without_vowels
+  end
+
+  def test_trim_last_letter
+    skip
+    animals = %w(dog cat mouse frog platypus)
+    #write code here
+    assert_equal %w(do ca mous fro platypu), trimmed
   end
 
 end

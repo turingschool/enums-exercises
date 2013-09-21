@@ -5,12 +5,12 @@ require 'minitest/pride'
 class TransformCollectionsTest < Minitest::Test
   # You get the first test for free... it's already passing.
   def test_capitalize
-    names = %w(alice bob charlie)
+    names = ["alice", "bob", "charlie"]
     capitalized_names = []
     names.each do |name|
       capitalized_names << name.capitalize
     end
-    assert_equal %w(Alice Bob Charlie), capitalized_names
+    assert_equal ["Alice", "Bob", "Charlie"], capitalized_names
   end
 
   # This test is missing a single line of code
@@ -36,7 +36,7 @@ class TransformCollectionsTest < Minitest::Test
 
   def test_lengths
     skip
-    names = %w(alice bob charlie david eve)
+    names = ["alice", "bob", "charlie", "david", "eve"]
     # write code here
     assert_equal [5, 3, 7, 5, 3], lengths
   end
@@ -50,33 +50,33 @@ class TransformCollectionsTest < Minitest::Test
 
   def test_reverse
     skip
-    names = %w(alice bob charlie david eve)
+    names = ["alice", "bob", "charlie", "david", "eve"]
     # write code here
-    assert_equal %w(ecila bob eilrahc divad eve), backwards
+    assert_equal ["ecila", "bob", "eilrahc", "divad", "eve"], backwards
   end
 
   def test_words_with_no_vowels
     skip
-    words = %w(green sheep travel least boat)
+    words = ["green", "sheep", "travel", "least", "boat"]
     # write code here
-    assert_equal %w(grn shp trvl lst bt), without_vowels
+    assert_equal ["grn", "shp", "trvl", "lst", "bt"], without_vowels
   end
 
   def test_trim_last_letter
     skip
-    animals = %w(dog cat mouse frog platypus)
+    animals = ["dog", "cat", "mouse", "frog", "platypus"]
     #write code here
-    assert_equal %w(do ca mous fro platypu), trimmed
+    assert_equal ["do", "ca", "mous", "fro", "platypu"], trimmed
   end
 end
 
 class TransformCollectionsWithMapTest < Minitest::Test
   def test_capitalize_with_map
-    names = %w(alice bob charlie)
+    names = ["alice", "bob", "charlie"]
     capitalized_names = names.map do |name|
       name.capitalize
     end
-    assert_equal %w(Alice Bob Charlie), capitalized_names
+    assert_equal ["Alice", "Bob", "Charlie"], capitalized_names
   end
 end
 

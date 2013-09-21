@@ -3,63 +3,92 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 class FilterUnwantedValuesTest < Minitest::Test
+  # You get the first test for free... it's already passing.
   def test_remove_zeros
     numbers = [2, 93, 7, 0, 0, 1, 0, 31, 0, 368]
     filtered = []
     numbers.each do |number|
-      # write code here
+      filtered << number unless number.zero?
     end
     assert_equal [2, 93, 7, 1, 31, 368], filtered
   end
 
+  # This test is missing a single line of code
   def test_remove_vowels
     skip
     letters = "all your base are belong to us".chars
-    # write code here
+    remaining = []
+    letters.each do |letters|
+      # write code here
+    end
     assert_equal "ll r bs r blng t s", remaining.join
   end
 
+  # This test is missing the whole loop
   def test_remove_numbers_divisible_by_3
     skip
     numbers = (1..20)
+    remaining = []
     # write code here
     expected = [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20]
     assert_equal expected, remaining
   end
 
+  # From here on out, you're pretty much on your own...
+
   def test_remove_words_with_more_than_three_letters
     skip
-    words = %w(pill bad finger cat blue dog table red)
+    words = [
+      "pill", "bad", "finger", "cat",
+      "blue", "dog", "table", "red"
+    ]
     # write code here
-    assert_equal %w(bad cat dog red), remaining
+    assert_equal ["bad", "cat", "dog", "red"], remaining
   end
 
   def test_remove_words_ending_in_e
     skip
-    words = %w(are you strike thinking belt piece warble sing pipe)
+    words = [
+      "are", "you", "strike",
+      "thinking", "belt", "piece",
+      "warble", "sing", "pipe"
+    ]
     # write code here
-    assert_equal %w(you thinking belt sing), remaining
+    assert_equal ["you", "thinking", "belt", "sing"], remaining
   end
 
   def test_remove_words_ending_in_ing
     skip
-    words = %w(drought singing hat shoehorning purposeful)
+    words = [
+      "bring", "finger", "drought", "singing",
+      "hat", "shoehorning", "purposeful"
+    ]
     # write code here
-    assert_equal %w(drought hat purposeful), remaining
+    assert_equal ["finger", "drought", "hat", "purposeful"], remaining
   end
 
   def test_remove_numbers
     skip
     array = ['cat', 'dog', 23, 56, 'aimless', 43]
     # write code here
-    assert_equal %w(cat dog aimless), remaining
+    assert_equal ["cat", "dog", "aimless"], remaining
   end
 
   def test_remove_animals_starting_with_vowels
     skip
-    animals = %w(aardvark bonobo cat dog elephant)
+    animals = ["aardvark", "bonobo", "cat", "dog", "elephant"]
     # write code here
-    assert_equal %w(bonobo cat dog), remaining
+    assert_equal ["bonobo", "cat", "dog"], remaining
+  end
+end
+
+class FilterUnwantedValuesUsingRejectTest < Minitest::Test
+  def test_remove_zeros_using_reject
+    numbers = [2, 93, 7, 0, 0, 1, 0, 31, 0, 368]
+    filtered = numbers.reject do |number|
+      number.zero?
+    end
+    assert_equal [2, 93, 7, 1, 31, 368], filtered
   end
 end
 

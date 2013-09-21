@@ -26,7 +26,10 @@ class PickDesiredValuesTest < Minitest::Test
   # This test is missing the whole loop
   def test_pick_words_with_three_letters
     skip
-    words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
+    words = [
+      "pill", "bad", "finger", "cat",
+      "blue", "dog", "table", "red"
+    ]
     selected = []
     # write code here
     assert_equal ["bad", "cat", "dog", "red"], selected
@@ -36,21 +39,31 @@ class PickDesiredValuesTest < Minitest::Test
 
   def test_pick_words_with_more_than_three_letters
     skip
-    words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
+    words = [
+      "pill", "bad", "finger", "cat",
+      "blue", "dog", "table", "red"
+    ]
     # write code here
     assert_equal ["pill", "finger", "blue", "table"], selected
   end
 
   def test_pick_words_ending_in_e
     skip
-    words = ["are", "you", "strike", "thinking", "belt", "piece", "warble", "sing", "pipe"]
+    words = [
+      "are", "you", "strike",
+      "thinking", "belt", "piece",
+      "warble", "sing", "pipe"
+    ]
     # write code here
     assert_equal ["are", "strike", "piece", "warble", "pipe"], selected
   end
 
   def test_pick_words_ending_in_ing
     skip
-    words = ["bring", "finger", "drought", "singing", "hat", "shoehorning", "purposeful"]
+    words = [
+      "bring", "finger", "drought", "singing",
+      "hat", "shoehorning", "purposeful"
+    ]
     # write code here
     assert_equal ["singing", "shoehorning"], selected
   end
@@ -64,9 +77,15 @@ class PickDesiredValuesTest < Minitest::Test
 
   def test_pick_dinosaurs
     skip
-    animals = ["tyrannosaurus", "teacup_poodle", "achillesaurus", "ankylosaurus", "qingxiusaurus"]
+    animals = [
+      "tyrannosaurus", "teacup_poodle", "achillesaurus",
+      "ankylosaurus", "qingxiusaurus"
+    ]
     # write code here
-    assert_equal ["tyrannosaurus", "achillesaurus", "ankylosaurus", "qingxiusaurus"], selected
+    expected = [
+      "tyrannosaurus", "achillesaurus", "ankylosaurus", "qingxiusaurus"
+    ]
+    assert_equal expected, selected
   end
 end
 

@@ -2,10 +2,15 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class FindFirstOneTest < Minitest::Test
-  Thing = Struct.new(:adjective) do
+# You get the first test for free... it's already passing.
+class FindFirstWeirdThingTest < Minitest::Test
+  class Thing
+    def initialize(adjective)
+      @adjective = adjective
+    end
+
     def weird?
-      adjective == 'weird'
+      @adjective == 'weird'
     end
   end
 
@@ -20,14 +25,24 @@ class FindFirstOneTest < Minitest::Test
 
     found = nil
     things.each do |thing|
-      # write code here
+      if thing.weird?
+        found = thing
+        break
+      end
     end
-    assert_equal thing3.object_id, found.object_id
+    assert_equal thing3, found
   end
+end
 
-  Unicorn = Struct.new(:color) do
+# This one is missing the block inside the loop.
+class FindFirstPinkUnicornTest < Minitest::Test
+  class Unicorn
+    def initialize(color)
+      @color = color
+    end
+
     def pink?
-      color == 'pink'
+      @color == 'pink'
     end
   end
 
@@ -41,14 +56,23 @@ class FindFirstOneTest < Minitest::Test
 
     unicorns = [unicorn1, unicorn2, unicorn3, unicorn4, unicorn5]
 
-    # write code here
-
-    assert_equal unicorn4.object_id, found.object_id
+    found = nil
+    unicorns.each do |unicorn|
+      # write code here
+    end
+    assert_equal unicorn4, found
   end
+end
 
-  Gnome = Struct.new(:type) do
+# This one is missing the entire loop
+class FindFirstRovingGnomeTest < Minitest::Test
+  class Gnome
+    def initialize(type)
+      @type = type
+    end
+
     def roving?
-      type == 'roving'
+      @type == 'roving'
     end
   end
 
@@ -62,15 +86,23 @@ class FindFirstOneTest < Minitest::Test
 
     gnomes = [gnome1, gnome2, gnome3, gnome4, gnome5]
 
+    found = nil
+
     # write code here
 
-    assert_equal gnome2.object_id, found.object_id
-
+    assert_equal gnome2, found
   end
+end
 
-  Squid = Struct.new(:size) do
+# You're on your own on this one.
+class FindFirstGiantSquidTest < Minitest::Test
+  class Squid
+    def initialize(size)
+      @size = size
+    end
+
     def giant?
-      size == 'giant'
+      @size == 'giant'
     end
   end
 
@@ -86,8 +118,34 @@ class FindFirstOneTest < Minitest::Test
 
     # write code here
 
-    assert_equal squid3.object_id, found.object_id
+    assert_equal squid3, found
+  end
+end
+
+class FindFirstWeirdThingUsingFindTest < Minitest::Test
+  class Thing
+    def initialize(adjective)
+      @adjective = adjective
+    end
+
+    def weird?
+      @adjective == 'weird'
+    end
   end
 
+  def test_first_weird_thing_using_find
+    thing1 = Thing.new('odd')
+    thing2 = Thing.new('cool')
+    thing3 = Thing.new('weird')
+    thing4 = Thing.new('fun')
+    thing5 = Thing.new('weird')
+
+    things = [thing1, thing2, thing3, thing4, thing5]
+
+    found = things.find do |thing|
+      thing.weird?
+    end
+    assert_equal thing3, found
+  end
 end
 

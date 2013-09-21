@@ -3,26 +3,36 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 class TransformCollectionsTest < Minitest::Test
+  # You get the first test for free... it's already passing.
   def test_capitalize
     names = %w(alice bob charlie)
     capitalized_names = []
-    # write code here
+    names.each do |name|
+      capitalized_names << name.capitalize
+    end
     assert_equal %w(Alice Bob Charlie), capitalized_names
   end
 
+  # This test is missing a single line of code
   def test_doubles
-    skip
     numbers = [1, 2, 3, 4, 5]
-    # write code here
+    doubles = []
+    numbers.each do |number|
+      # write code here
+    end
     assert_equal [2, 4, 6, 8, 10], doubles
   end
 
+  # This test is missing the whole loop
   def test_squares
     skip
+    squares = []
     numbers = [1, 2, 3, 4, 5]
     # write code here
     assert_equal [1, 4, 9, 16, 25], squares
   end
+
+  # From here on out, you're pretty much on your own...
 
   def test_lengths
     skip
@@ -58,6 +68,15 @@ class TransformCollectionsTest < Minitest::Test
     #write code here
     assert_equal %w(do ca mous fro platypu), trimmed
   end
+end
 
+class TransformCollectionsWithMapTest < Minitest::Test
+  def test_capitalize_with_map
+    names = %w(alice bob charlie)
+    capitalized_names = names.map do |name|
+      name.capitalize
+    end
+    assert_equal %w(Alice Bob Charlie), capitalized_names
+  end
 end
 

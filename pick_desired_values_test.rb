@@ -78,8 +78,9 @@ class PickDesiredValuesTest < Minitest::Test
   def test_pick_dinosaurs
     skip
     animals = [
-      "tyrannosaurus", "teacup_poodle", "achillesaurus",
-      "ankylosaurus", "qingxiusaurus"
+      "tyrannosaurus", "teacup poodle", "achillesaurus",
+      "ankylosaurus", "narwhal", "qingxiusaurus",
+      "duck-billed platypus", "sealion", "slime eel"
     ]
     # write code here
     expected = [

@@ -113,22 +113,6 @@ We will use alternate Enumerable methods to solve the same problems as before:
 * **all?**: `are_they_all_test.rb`
 * **find**: `find_first_one_test.rb`
 
-## TODO
-
-Add one test of each type to the bonus section without saying which type it is.
-
-Add:
-
-* `none?`
-* `one?`
-* `min`
-* `max`
-* `reduce`
-* `sort`
-* `zip`
-* `count`
-* `each_with_object`
-
 ## License
 
 The MIT License (MIT)

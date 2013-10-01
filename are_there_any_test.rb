@@ -109,6 +109,7 @@ class AreThereAnyUsingAnyTest < Minitest::Test
     has_zero = numbers.any? do |number|
       number.zero?
     end
+    assert has_zero
   end
 end
 

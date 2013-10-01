@@ -88,6 +88,39 @@ class PickDesiredValuesTest < Minitest::Test
     ]
     assert_equal expected, selected
   end
+
+  def test_pick_floats
+    skip
+    floats = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
+    # write code here
+    expected = [1.4, 3.5, 4.9, 9.1, 8.0]
+    assert_equal expected, selected
+  end
+
+  def test_pick_arrays
+    skip
+    array = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
+    # write code here
+    expected = [["dog"],[56, 3, 8]]
+    assert_equal expected, selected
+  end
+
+  def test_pick_hashes
+    skip
+    array = ["cat", {dog: "fido"}, 23, { stuff: "things"}, "aimless", 43]
+    # write code here
+    expected = [{dog: "fido"}, { stuff: "things"}]
+    assert_equal expected, selected
+  end
+
+  def test_has_instance_of_Time
+    skip
+    time = Time.now
+    numbers = [time, 1, 3, 2, 4, 9, 8]
+    # write code here
+    expected = [time]
+    assert_equal expected, selected
+  end
 end
 
 class PickDesiredValuesWithSelectTest < Minitest::Test

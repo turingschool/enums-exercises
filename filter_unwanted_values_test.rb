@@ -69,9 +69,16 @@ class FilterUnwantedValuesTest < Minitest::Test
 
   def test_remove_numbers
     skip
-    array = ['cat', 'dog', 23, 56, 'aimless', 43]
+    array = ["cat", "dog", 23, 56, "aimless", 43]
     # write code here
     assert_equal ["cat", "dog", "aimless"], remaining
+  end
+
+  def test_remove_floats
+    skip
+    array = ["cat", "dog", 32.333, 23, 56, "aimless", 43.2]
+    # write code here
+    assert_equal ["cat", 23, 56, "dog", "aimless"], remaining
   end
 
   def test_remove_animals_starting_with_vowels
@@ -79,6 +86,27 @@ class FilterUnwantedValuesTest < Minitest::Test
     animals = ["aardvark", "bonobo", "cat", "dog", "elephant"]
     # write code here
     assert_equal ["bonobo", "cat", "dog"], remaining
+  end
+
+  def test_remove_upcased_words
+    skip
+    array = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
+    # write code here
+    assert_equal [["dog"], 23, [56, 3, 8], 43, "butter"], remaining
+  end
+
+  def test_remove_arrays
+    skip
+    array = ["cat", ["dog"], 23, [56, 3, 8], "aimless", 43, "butter"]
+    # write code here
+    assert_equal ["cat", 23, "aimless", 43, "butter"], remaining
+  end
+
+  def test_remove_hashes
+    skip
+    array = ["cat", {dog: "fido"}, 23, { stuff: "things"}, "aimless", 43]
+    # write code here
+    assert_equal ["cat", 23, "aimless", 43], remaining
   end
 end
 

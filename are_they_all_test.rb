@@ -69,6 +69,35 @@ class AreTheyAllTest < Minitest::Test
     # write code here
     assert all_false
   end
+
+  def test_all_integers
+    skip
+    numbers = [3, 1, 3, 2, 4, 9, 8]
+    # write code here
+    assert all_integers
+  end
+
+  def test_all_not_integers
+    skip
+    numbers = [3, 1, 3, 2, 4, 9, 'cat']
+    # write code here
+    refute all_integers
+  end
+
+  def test_all_floats
+    skip
+    floats = [3.2, 1.4, 3.5, 2.6, 4.9, 9.1, 8.0]
+    # write code here
+    assert all_floats
+  end
+
+  def test_all_not_floats
+    skip
+    floats = [3, 1.4, 3.5, 2.6, 4.9, 9.1, 8.0]
+    # write code here
+    assert all_floats
+  end
+
 end
 
 class AreTheyAllUsingAllTest < Minitest::Test

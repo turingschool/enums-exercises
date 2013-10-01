@@ -121,6 +121,13 @@ class PickDesiredValuesTest < Minitest::Test
     expected = [time]
     assert_equal expected, selected
   end
+
+  def test_pick_words_ending_in_ing_including_word_with_internal_ing
+    skip
+    words = %w(drought singing hat shoehorning purposeful bingo)
+    # write code here
+    assert_equal %w(singing shoehorning), selected
+  end
 end
 
 class PickDesiredValuesWithSelectTest < Minitest::Test

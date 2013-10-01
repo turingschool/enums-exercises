@@ -42,6 +42,13 @@ class AreTheyAllTest < Minitest::Test
     refute all_gone
   end
 
+  def test_not_all_gone_with_yepp_in_middle
+    skip
+    words = %w(gone gone gone yepp gone gone gone gone)
+    # write code here
+    refute all_gone
+  end
+
   def test_all_empty
     skip
     words = ["", "", "", "", ""]

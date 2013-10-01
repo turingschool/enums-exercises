@@ -62,6 +62,35 @@ class AreThereAnyTest < Minitest::Test
     # write code here
     refute has_monkeys
   end
+  
+  def test_has_multiples_of_5
+    skip
+    numbers = [3, 5, 2, 4, 10, 8]
+    # write code here
+    assert has_multiple_of_5
+  end
+
+  def test_no_multiples_of_5
+    skip
+    numbers = [3, 1, 3, 2, 4, 9, 8]
+    # write code here
+    refute has_multiple_of_5
+  end
+
+  def test_no_instances_of_Time
+    skip
+    numbers = [3, 1, 3, 2, 4, 9, 8]
+    # write code here
+    refute has_no_instances_of_Time
+  end
+
+  def test_has_instance_of_Time
+    skip
+    time = Time.now
+    numbers = [time, 1, 3, 2, 4, 9, 8]
+    # write code here
+    refute has_no_instances_of_Time
+  end
 end
 
 class AreThereAnyUsingAnyTest < Minitest::Test

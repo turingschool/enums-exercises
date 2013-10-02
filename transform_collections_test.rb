@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class TransformCollectionsTest < Minitest::Test
+class TransformCollectionsTest < MiniTest::Unit::TestCase
   # You get the first test for free... it's already passing.
   def test_capitalize
     names = ["alice", "bob", "charlie"]
@@ -77,7 +77,7 @@ class TransformCollectionsTest < Minitest::Test
   end
 end
 
-class TransformCollectionsWithMapTest < Minitest::Test
+class TransformCollectionsWithMapTest < MiniTest::Unit::TestCase
   def test_capitalize_with_map
     names = ["alice", "bob", "charlie"]
     capitalized_names = names.map do |name|

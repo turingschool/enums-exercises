@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class BasicEnumsTest < MiniTest::Unit
+class BasicEnumsTest < MiniTest::Unit::TestCase
   def test_solve_for_x
     s = ''
     5.times do

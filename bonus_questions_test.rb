@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class BonusQuestionsTest < MiniTest::Unit
+class BonusQuestionsTest < MiniTest::Unit::TestCase
   def test_7_factorial
     # Example: "Five factorial", written 5!, is
     # 1 * 2 * 3 * 4 * 5

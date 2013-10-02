@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class PickDesiredValuesTest < MiniTest::Unit
+class PickDesiredValuesTest < MiniTest::Unit::TestCase
   # You get the first test for free... it's already passing.
   def test_pick_even_numbers
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -123,7 +123,7 @@ class PickDesiredValuesTest < MiniTest::Unit
   end
 end
 
-class PickDesiredValuesWithSelectTest < MiniTest::Unit
+class PickDesiredValuesWithSelectTest < MiniTest::Unit::TestCase
   def test_pick_even_numbers_with_select
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     evens = numbers.select do |number|

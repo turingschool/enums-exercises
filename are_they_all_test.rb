@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class AreTheyAllTest < MiniTest::Unit
+class AreTheyAllTest < MiniTest::Unit::TestCase
   # You get the first test for free... it's already passing.
   def test_not_all_zeros
     numbers = [0, 0, 0, 0, 1, 0, 0, 0]
@@ -107,7 +107,7 @@ class AreTheyAllTest < MiniTest::Unit
 
 end
 
-class AreTheyAllUsingAllTest < MiniTest::Unit
+class AreTheyAllUsingAllTest < MiniTest::Unit::TestCase
   def test_not_all_zeros_using_all
     numbers = [0, 0, 0, 0, 1, 0, 0, 0]
     all_zeros = numbers.all? do |number|

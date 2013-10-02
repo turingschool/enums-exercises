@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class FilterUnwantedValuesTest < MiniTest::Unit
+class FilterUnwantedValuesTest < MiniTest::Unit::TestCase
   # You get the first test for free... it's already passing.
   def test_remove_zeros
     numbers = [2, 93, 7, 0, 0, 1, 0, 31, 0, 368]
@@ -110,7 +110,7 @@ class FilterUnwantedValuesTest < MiniTest::Unit
   end
 end
 
-class FilterUnwantedValuesUsingRejectTest < MiniTest::Unit
+class FilterUnwantedValuesUsingRejectTest < MiniTest::Unit::TestCase
   def test_remove_zeros_using_reject
     numbers = [2, 93, 7, 0, 0, 1, 0, 31, 0, 368]
     filtered = numbers.reject do |number|

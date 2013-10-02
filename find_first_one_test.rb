@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 # You get the first test for free... it's already passing.
-class FindFirstWeirdThingTest < Minitest::Test
+class FindFirstWeirdThingTest < MiniTest::Unit::TestCase
   class Thing
     def initialize(adjective)
       @adjective = adjective
@@ -35,7 +35,7 @@ class FindFirstWeirdThingTest < Minitest::Test
 end
 
 # This one is missing the block inside the loop.
-class FindFirstPinkUnicornTest < Minitest::Test
+class FindFirstPinkUnicornTest < MiniTest::Unit::TestCase
   class Unicorn
     def initialize(color)
       @color = color
@@ -65,7 +65,7 @@ class FindFirstPinkUnicornTest < Minitest::Test
 end
 
 # This one is missing the entire loop
-class FindFirstRovingGnomeTest < Minitest::Test
+class FindFirstRovingGnomeTest < MiniTest::Unit::TestCase
   class Gnome
     def initialize(type)
       @type = type
@@ -95,7 +95,7 @@ class FindFirstRovingGnomeTest < Minitest::Test
 end
 
 # You're on your own on this one.
-class FindFirstGiantSquidTest < Minitest::Test
+class FindFirstGiantSquidTest < MiniTest::Unit::TestCase
   class Squid
     def initialize(size)
       @size = size
@@ -122,7 +122,7 @@ class FindFirstGiantSquidTest < Minitest::Test
   end
 end
 
-class FindFirstWeirdThingUsingFindTest < Minitest::Test
+class FindFirstWeirdThingUsingFindTest < MiniTest::Unit::TestCase
   class Thing
     def initialize(adjective)
       @adjective = adjective

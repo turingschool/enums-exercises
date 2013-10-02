@@ -62,7 +62,7 @@ class AreThereAnyTest < Minitest::Test
     # write code here
     refute has_monkeys
   end
-  
+
   def test_has_multiples_of_5
     skip
     numbers = [3, 5, 2, 4, 10, 8]
@@ -91,7 +91,7 @@ class AreThereAnyTest < Minitest::Test
     # write code here
     refute has_no_instances_of_Time
   end
-  
+
   def test_has_a_zero_not_in_last_position
     skip
     numbers = [2, 9, 0, 1, 3]

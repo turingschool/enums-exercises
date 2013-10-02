@@ -46,7 +46,7 @@ class TransformCollectionsTest < Minitest::Test
     numbers = [234, 10, 9119, 38881]
     # write code here
     assert_equal %w(00234 00010 09119 38881), zip_codes
-  end  
+  end
 
   def test_normalize_zip_codes_with_long_zip
     skip

@@ -2,7 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class AreThereAnyTest < Minitest::Test
+class AreThereAnyTest < MiniTest::Unit
   # You get the first test for free... it's already passing.
   def test_has_a_zero
     numbers = [2, 9, 3, 1, 0]
@@ -100,7 +100,7 @@ class AreThereAnyTest < Minitest::Test
   end
 end
 
-class AreThereAnyUsingAnyTest < Minitest::Test
+class AreThereAnyUsingAnyTest < MiniTest::Unit
   def test_has_a_zero_using_any
     numbers = [2, 9, 3, 1, 0]
     has_zero = numbers.any? do |number|

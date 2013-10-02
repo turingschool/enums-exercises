@@ -59,19 +59,12 @@ class FilterUnwantedValuesTest < Minitest::Test
 
   def test_remove_words_ending_in_ing
     skip
-    words = %w(drought singing hat shoehorning purposeful)
-    # write code here
-    assert_equal %w(drought hat purposeful), remaining
-  end
-
-  def test_remove_words_ending_in_ing_including_word_with_internal_ing
-    skip
     words = [
       "bring", "finger", "drought", "singing",
-      "hat", "shoehorning", "purposeful"
+      "hat", "shoehorning", "bingo", "purposeful"
     ]
     # write code here
-    assert_equal ["finger", "drought", "hat", "purposeful"], remaining
+    assert_equal ["finger", "drought", "hat", "bingo", "purposeful"], remaining
   end
 
   def test_remove_numbers

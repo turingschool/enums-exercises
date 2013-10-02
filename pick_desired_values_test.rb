@@ -62,10 +62,10 @@ class PickDesiredValuesTest < Minitest::Test
     skip
     words = [
       "bring", "finger", "drought", "singing",
-      "hat", "shoehorning", "purposeful"
+      "hat", "shoehorning", "bingo", "purposeful"
     ]
     # write code here
-    assert_equal ["singing", "shoehorning"], selected
+    assert_equal ["bring", "singing", "shoehorning"], selected
   end
 
   def test_select_all_words_containing_e
@@ -120,13 +120,6 @@ class PickDesiredValuesTest < Minitest::Test
     # write code here
     expected = [time]
     assert_equal expected, selected
-  end
-
-  def test_pick_words_ending_in_ing_including_word_with_internal_ing
-    skip
-    words = %w(drought singing hat shoehorning purposeful bingo)
-    # write code here
-    assert_equal %w(singing shoehorning), selected
   end
 end
 

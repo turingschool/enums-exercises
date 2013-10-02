@@ -27,7 +27,7 @@ class AreTheyAllTest < Minitest::Test
   # This test is missing the whole loop
   def test_all_gone
     skip
-    words = %w(gone gone gone gone gone gone gone)
+    words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
     all_gone = true
     # write code here
     assert all_gone
@@ -37,14 +37,14 @@ class AreTheyAllTest < Minitest::Test
 
   def test_not_all_gone
     skip
-    words = %w(gone gone gone gone gone gone gone yepp)
+    words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone", "yepp"]
     # write code here
     refute all_gone
   end
 
   def test_not_all_gone_with_yepp_in_middle
     skip
-    words = %w(gone gone gone yepp gone gone gone gone)
+    words = ["gone", "gone", "gone", "yepp", "gone", "gone", "gone", "gone"]
     # write code here
     refute all_gone
   end
@@ -65,7 +65,7 @@ class AreTheyAllTest < Minitest::Test
 
   def test_all_uppercase
     skip
-    words = %w(DOUGHNUT CASH MAIN bOWl SMACK SAND)
+    words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
     # write code here
     refute all_uppercase
   end

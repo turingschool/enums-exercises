@@ -95,10 +95,7 @@ class AreThereAnyTest < Minitest::Test
   def test_has_a_zero_not_in_last_position
     skip
     numbers = [2, 9, 0, 1, 3]
-    has_zero = false
-    numbers.each do |number|
-      # write code here
-    end
+    # write code here
     assert has_zero
   end
 end

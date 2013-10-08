@@ -2,22 +2,22 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class TransformCollectionsTest < Minitest::Test
+class TransformCollectionsWithMapTest < Minitest::Test
   # You get the first test for free... it's already passing.
   def test_capitalize
     names = ["alice", "bob", "charlie"]
-    capitalized_names = []
-    names.each do |name|
-      capitalized_names << name.capitalize
+    capitalized_names = names.map do |name|
+      name.capitalize
     end
+
     assert_equal ["Alice", "Bob", "Charlie"], capitalized_names
   end
 
   # This test is missing a single line of code
   def test_doubles
+    skip
     numbers = [1, 2, 3, 4, 5]
-    doubles = []
-    numbers.each do |number|
+    doubles = numbers.map do |number|
       # write code here
     end
     assert_equal [2, 4, 6, 8, 10], doubles
@@ -26,7 +26,6 @@ class TransformCollectionsTest < Minitest::Test
   # This test is missing the whole loop
   def test_squares
     skip
-    squares = []
     numbers = [1, 2, 3, 4, 5]
     # write code here
     assert_equal [1, 4, 9, 16, 25], squares

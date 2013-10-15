@@ -2,8 +2,8 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-# You get the first test for free... it's already passing.
-class FindFirstWeirdThingTest < Minitest::Test
+# First one is passing
+class FindFirstWeirdThingUsingFindTest < Minitest::Test
   class Thing
     def initialize(adjective)
       @adjective = adjective
@@ -14,7 +14,7 @@ class FindFirstWeirdThingTest < Minitest::Test
     end
   end
 
-  def test_first_weird_thing
+  def test_first_weird_thing_using_find
     thing1 = Thing.new('odd')
     thing2 = Thing.new('cool')
     thing3 = Thing.new('weird')
@@ -23,19 +23,15 @@ class FindFirstWeirdThingTest < Minitest::Test
 
     things = [thing1, thing2, thing3, thing4, thing5]
 
-    found = nil
-    things.each do |thing|
-      if thing.weird?
-        found = thing
-        break
-      end
+    found = things.find do |thing|
+      thing.weird?
     end
     assert_equal thing3, found
   end
 end
 
 # This one is missing the block inside the loop.
-class FindFirstPinkUnicornTest < Minitest::Test
+class FindFirstPinkUnicornUsingFindTest < Minitest::Test
   class Unicorn
     def initialize(color)
       @color = color
@@ -56,8 +52,7 @@ class FindFirstPinkUnicornTest < Minitest::Test
 
     unicorns = [unicorn1, unicorn2, unicorn3, unicorn4, unicorn5]
 
-    found = nil
-    unicorns.each do |unicorn|
+    found = unicorns.find do |unicorn|
       # write code here
     end
     assert_equal unicorn4, found
@@ -65,7 +60,7 @@ class FindFirstPinkUnicornTest < Minitest::Test
 end
 
 # This one is missing the entire loop
-class FindFirstRovingGnomeTest < Minitest::Test
+class FindFirstRovingGnomeUsingFindTest < Minitest::Test
   class Gnome
     def initialize(type)
       @type = type
@@ -86,16 +81,14 @@ class FindFirstRovingGnomeTest < Minitest::Test
 
     gnomes = [gnome1, gnome2, gnome3, gnome4, gnome5]
 
-    found = nil
-
-    # write code here
+    found = nil # write code here (instead of nil)
 
     assert_equal gnome2, found
   end
 end
 
 # You're on your own on this one.
-class FindFirstGiantSquidTest < Minitest::Test
+class FindFirstGiantSquidUsingFindTest < Minitest::Test
   class Squid
     def initialize(size)
       @size = size

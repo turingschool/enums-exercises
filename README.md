@@ -14,49 +14,22 @@ Create a branch so that you're not changing `master`:
 $ git checkout -b make-tests-pass
 ```
 
-## Keeping in sync with the upstream repository
-
-`origin` is your fork of the project. We'll need to connect to the upstream repository.
-
-To do this, add a new remote named upstream that points to the JumpstartLab:
-
-```bash
-$ git remote add upstream git@github.com:JumpstartLab/enums-exercises.git
-```
-
-Then pull down the updated version of upstream:
-
-```bash
-$ git fetch upstream
-```
-
-And now make sure you're on master:
-
-```bash
-$ git checkout master
-$ git branch # should say *master
-```
-
-Make master point to the exact commit that upstream/master is pointing at:
-
-```bash
-$ git reset --hard upstream/master
-```
-
 ## Basic Concepts
 
 See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop through a collection.
 
-## Using Each
+## The `map` Pattern
 
-Use `each` to get all of the tests passing in:
+1. `exercises/map_pattern_test.rb`
+2. `exercises/map_test.rb`
 
-* `transform_collections_test.rb`
-* `pick_desired_values_test.rb`
-* `filter_unwanted_values_test.rb`
-* `are_there_any_test.rb`
-* `are_they_all_test.rb`
-* `find_first_one_test.rb`
+## Other exercises
+
+* `exercises/pick_desired_values_test.rb`
+* `exercises/filter_unwanted_values_test.rb`
+* `exercises/are_there_any_test.rb`
+* `exercises/are_they_all_test.rb`
+* `exercises/find_first_one_test.rb`
 
 Commit your changes:
 
@@ -112,6 +85,35 @@ We will use alternate Enumerable methods to solve the same problems as before:
 * **any?**: `are_there_any_test.rb`
 * **all?**: `are_they_all_test.rb`
 * **find**: `find_first_one_test.rb`
+
+## Keeping in sync with the upstream repository
+
+`origin` is your fork of the project. We'll need to connect to the upstream repository.
+
+To do this, add a new remote named upstream that points to the JumpstartLab:
+
+```bash
+$ git remote add upstream git@github.com:JumpstartLab/enums-exercises.git
+```
+
+Then pull down the updated version of upstream:
+
+```bash
+$ git fetch upstream
+```
+
+And now make sure you're on master:
+
+```bash
+$ git checkout master
+$ git branch # should say *master
+```
+
+Make master point to the exact commit that upstream/master is pointing at:
+
+```bash
+$ git reset --hard upstream/master
+```
 
 ## License
 

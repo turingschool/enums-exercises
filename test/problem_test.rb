@@ -62,7 +62,7 @@ class ExerciseTest < Minitest::Test
   end
 
   def test_example
-    ex = exercise.example!
+    ex = exercise.example!("letter.upcase")
     assert ex.assignment?
     assert ex.loop?
     assert ex.example?

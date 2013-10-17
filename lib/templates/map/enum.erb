@@ -6,7 +6,7 @@
     <% if loop? %>
     <%= output_variable %> = <%= input_variable %>.map do |<%= block_variable %>|
       <% if example? %>
-       <%= block_variable %>.<%= name %>
+       <%= block %>
       <% else %>
       # Your code goes here
       <% end %>

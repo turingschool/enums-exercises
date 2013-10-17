@@ -6,7 +6,7 @@ class MapProblem
       "capitalize",
       {"names" => %w(alice bob charlie)},
       {"capitalized_names" => %w(Alice Bob Charlie)},
-    ).example!
+    ).example!("name.capitalize")
 
     exercise << Problem.new(
       "doubles",

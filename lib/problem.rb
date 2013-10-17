@@ -1,6 +1,6 @@
 class Problem
   attr_reader :name, :input_variable, :input,
-    :output_variable, :output
+    :output_variable, :output, :block
 
   def initialize(name, input, output)
     @name = name
@@ -12,8 +12,9 @@ class Problem
     input_variable.to_s.chop
   end
 
-  def example!
+  def example!(code)
     @example = true
+    @block = code
     self
   end
 

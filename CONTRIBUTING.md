@@ -43,7 +43,7 @@ Creating an exercise for an enumerable method requires 4 steps:
 3. Run the generate rake task.
 4. Run the tests.
 
-## Step 1: Create the Generator
+### Step 1: Create the Generator
 
 Create a new file in the `lib/generators/` directory. Name it for the enumerable method that you're writing an exercise for, e.g. if the enumerable method is `count`, the filename will be `count_problem.rb`:
 
@@ -95,7 +95,7 @@ end
 
 This is what is used to provide less and less code up front in each test.
 
-## Step 2: Create the Template Files
+### Step 2: Create the Template Files
 
 Create two templates under `lib/templates/` in a directory named after
 the enumerable method, e.g.:
@@ -107,7 +107,7 @@ lib/templates/count/enum.rb
 
 Use the templates under `lib/templates/map/*` as inspiration.
 
-### The Pattern Using `#each`:
+#### The Pattern Using `#each`:
 
 The resulting `pattern` test suite should look like this:
 
@@ -122,7 +122,7 @@ def test_count_words_with_three_letters
 end
 ```
 
-### Using `#count`:
+#### Using `#count`:
 
 The resulting count test suite should have a test like this:
 
@@ -136,7 +136,7 @@ def test_count_words_with_three_letters
 end
 ```
 
-## Step 3: Generate the Test Suites
+### Step 3: Generate the Test Suites
 
 Run `rake generate`.
 
@@ -149,13 +149,13 @@ test/solutions/count_test.rb
 test/solutions/count_pattern_test.rb
 ```
 
-## Step 4: Verify the generated tests
+### Step 4: Verify the generated tests
 
 Run `rake test`.
 
 The test suite. This will verify the solutions. If everything passes, the generator works, and you can commit.
 
-## Step 5: Submit a Pull Request
+## Submit a Pull Request
 
 That's it. You're done.
 

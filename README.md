@@ -23,9 +23,13 @@ See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop
 1. `exercises/map_pattern_test.rb`
 2. `exercises/map_test.rb`
 
+## The `select` Pattern
+
+1. `exercises/select_pattern_test.rb`
+2. `exercises/select_test.rb`
+
 ## Other exercises
 
-* `exercises/pick_desired_values_test.rb`
 * `exercises/filter_unwanted_values_test.rb`
 * `exercises/are_there_any_test.rb`
 * `exercises/are_they_all_test.rb`

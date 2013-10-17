@@ -17,7 +17,7 @@ class ExerciseTest < Minitest::Test
   end
 
   def test_add_problem
-    problem = Problem.new("capitalize", [], [])
+    problem = Problem.new("capitalize", {}, {}, "1 == 1")
 
     exercise = Exercise.new(:min)
     exercise << problem

@@ -2,19 +2,19 @@ class Problem
   attr_reader :name, :input_variable, :input,
     :output_variable, :output, :block
 
-  def initialize(name, input, output)
+  def initialize(name, input, output, code)
     @name = name
     @input_variable, @input = input.to_a.first
     @output_variable, @output = output.to_a.first
+    @block = code
   end
 
   def block_variable
     input_variable.to_s.chop
   end
 
-  def example!(code)
+  def example!
     @example = true
-    @block = code
     self
   end
 

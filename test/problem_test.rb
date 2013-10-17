@@ -13,7 +13,7 @@ class ExerciseTest < Minitest::Test
   end
 
   def exercise
-    Problem.new("capitalize", input, output)
+    Problem.new("capitalize", input, output, "letter.upcase")
   end
 
   def test_name
@@ -62,7 +62,7 @@ class ExerciseTest < Minitest::Test
   end
 
   def test_example
-    ex = exercise.example!("letter.upcase")
+    ex = exercise.example!
     assert ex.assignment?
     assert ex.loop?
     assert ex.example?

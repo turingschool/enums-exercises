@@ -28,9 +28,13 @@ See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop
 1. `exercises/select_pattern_test.rb`
 2. `exercises/select_test.rb`
 
+## The `reject` Pattern
+
+1. `exercises/reject_pattern_test.rb`
+2. `exercises/reject_test.rb`
+
 ## Other exercises
 
-* `exercises/filter_unwanted_values_test.rb`
 * `exercises/are_there_any_test.rb`
 * `exercises/are_they_all_test.rb`
 * `exercises/find_first_one_test.rb`

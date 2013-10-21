@@ -33,9 +33,13 @@ See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop
 1. `exercises/reject_pattern_test.rb`
 2. `exercises/reject_test.rb`
 
+## The `any?` Pattern
+
+1. `exercises/any_pattern_test.rb`
+2. `exercises/any_test.rb`
+
 ## Other exercises
 
-* `exercises/are_there_any_test.rb`
 * `exercises/are_they_all_test.rb`
 * `exercises/find_first_one_test.rb`
 

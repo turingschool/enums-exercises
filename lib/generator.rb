@@ -5,13 +5,15 @@ require_relative 'test_suite'
 require_relative 'generator/map_problem'
 require_relative 'generator/select_problem'
 require_relative 'generator/reject_problem'
+require_relative 'generator/any_problem'
 
 class Generator
   def self.problems
     [
       MapProblem,
       SelectProblem,
-      RejectProblem
+      RejectProblem,
+      AnyProblem
     ]
   end
 

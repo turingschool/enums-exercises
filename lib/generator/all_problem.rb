@@ -60,7 +60,7 @@ class AllProblem
 
     exercise << Problem.new(
       "all_multiples_of_7",
-      {"numbers" => (1..8).map {|i| i*7}.shuffle},
+      {"numbers" => [42, 14, 35, 49, 28, 56, 21, 7]},
       {"all_multiples_of_7" => "assert"},
       "number % 7 == 0"
     )

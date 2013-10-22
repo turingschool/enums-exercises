@@ -77,7 +77,7 @@ class AllPatternTest < Minitest::Test
   end
 
   def test_all_multiples_of_7
-    numbers = [7, 49, 14, 56, 21, 35, 42, 28]
+    numbers = [42, 14, 35, 49, 28, 56, 21, 7]
     all_multiples_of_7 = true
     numbers.each do |number|
       all_multiples_of_7 = false unless number % 7 == 0

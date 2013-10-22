@@ -43,10 +43,14 @@ See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop
 1. `exercises/all_pattern_test.rb`
 2. `exercises/all_test.rb`
 
+## The `group_by` Pattern
+
+1. `exercises/group_by_pattern_test.rb`
+2. `exercises/group_by_test.rb`
+
 ## Other exercises
 
 * `exercises/find_first_one_test.rb`
-* `exercises/transform_using_group_by_test.rb`
 * `exercises/find_using_max_by_test.rb`
 
 Commit your changes:

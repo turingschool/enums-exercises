@@ -7,7 +7,7 @@ class MapTest < Minitest::Test
   def test_capitalize
     names = ["alice", "bob", "charlie"]
     capitalized_names = names.map do |name|
-       name.capitalize
+      name.capitalize
     end
     assert_equal ["Alice", "Bob", "Charlie"], capitalized_names
   end

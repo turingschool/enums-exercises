@@ -8,7 +8,7 @@ class MapPatternTest < Minitest::Test
     names = ["alice", "bob", "charlie"]
     capitalized_names = []
     names.each do |name|
-       capitalized_names << name.capitalize
+      capitalized_names << name.capitalize
     end
     assert_equal ["Alice", "Bob", "Charlie"], capitalized_names
   end
@@ -17,7 +17,7 @@ class MapPatternTest < Minitest::Test
     numbers = [1, 2, 3, 4, 5]
     doubles = []
     numbers.each do |number|
-       doubles << number * 2
+      doubles << number * 2
     end
     assert_equal [2, 4, 6, 8, 10], doubles
   end
@@ -26,7 +26,7 @@ class MapPatternTest < Minitest::Test
     numbers = [1, 2, 3, 4, 5]
     squares = []
     numbers.each do |number|
-       squares << number * number
+      squares << number * number
     end
     assert_equal [1, 4, 9, 16, 25], squares
   end
@@ -35,7 +35,7 @@ class MapPatternTest < Minitest::Test
     names = ["alice", "bob", "charlie", "david", "eve"]
     lengths = []
     names.each do |name|
-       lengths << name.length
+      lengths << name.length
     end
     assert_equal [5, 3, 7, 5, 3], lengths
   end
@@ -44,7 +44,7 @@ class MapPatternTest < Minitest::Test
     numbers = [234, 10, 9119, 38881]
     zip_codes = []
     numbers.each do |number|
-       zip_codes << number.to_s.rjust(5, '0')
+      zip_codes << number.to_s.rjust(5, '0')
     end
     assert_equal ["00234", "00010", "09119", "38881"], zip_codes
   end
@@ -53,7 +53,7 @@ class MapPatternTest < Minitest::Test
     names = ["alice", "bob", "charlie", "david", "eve"]
     backwards = []
     names.each do |name|
-       backwards << name.reverse
+      backwards << name.reverse
     end
     assert_equal ["ecila", "bob", "eilrahc", "divad", "eve"], backwards
   end
@@ -62,7 +62,7 @@ class MapPatternTest < Minitest::Test
     words = ["green", "sheep", "travel", "least", "boat"]
     without_vowels = []
     words.each do |word|
-       without_vowels << word.delete('aeiou')
+      without_vowels << word.delete('aeiou')
     end
     assert_equal ["grn", "shp", "trvl", "lst", "bt"], without_vowels
   end
@@ -71,7 +71,7 @@ class MapPatternTest < Minitest::Test
     animals = ["dog", "cat", "mouse", "frog", "platypus"]
     trimmed = []
     animals.each do |animal|
-       trimmed << animal.chop
+      trimmed << animal.chop
     end
     assert_equal ["do", "ca", "mous", "fro", "platypu"], trimmed
   end

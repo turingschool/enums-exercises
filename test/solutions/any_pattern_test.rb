@@ -8,7 +8,7 @@ class AnyPatternTest < Minitest::Test
     numbers = [2, 0, 9, 3, 0, 1]
     has_zero = false
     numbers.each do |number|
-       has_zero = true if number.zero?
+      has_zero = true if number.zero?
     end
     assert has_zero
   end
@@ -17,7 +17,7 @@ class AnyPatternTest < Minitest::Test
     numbers = [3, 1, 3, 2, 4, 9, 8]
     has_zero = false
     numbers.each do |number|
-       has_zero = true if number.zero?
+      has_zero = true if number.zero?
     end
     refute has_zero
   end
@@ -26,7 +26,7 @@ class AnyPatternTest < Minitest::Test
     names = ["Bill", "Bob", "Burton", "Alice", "Brandon"]
     has_alice = false
     names.each do |name|
-       has_alice = true if names.include?(name)
+      has_alice = true if names.include?(name)
     end
     assert has_alice
   end
@@ -35,7 +35,7 @@ class AnyPatternTest < Minitest::Test
     names = ["Chuck", "Charlene", "Cory", "Chris", "Carl"]
     has_alice = false
     names.each do |name|
-       has_alice = true if name == "Alice"
+      has_alice = true if name == "Alice"
     end
     refute has_alice
   end
@@ -44,7 +44,7 @@ class AnyPatternTest < Minitest::Test
     phrases = ["Sure!", "OK.", "I have no idea.", "Really?Whatever."]
     has_multi_word_phrase = false
     phrases.each do |phrase|
-       has_multi_word_phrase = true if phrase.split(' ').length > 0
+      has_multi_word_phrase = true if phrase.split(' ').length > 0
     end
     assert has_multi_word_phrase
   end
@@ -53,7 +53,7 @@ class AnyPatternTest < Minitest::Test
     animals = ["elephant", "hippo", "jaguar", "python"]
     has_monkeys = false
     animals.each do |animal|
-       has_monkeys = true if animal == "monkey"
+      has_monkeys = true if animal == "monkey"
     end
     refute has_monkeys
   end
@@ -62,7 +62,7 @@ class AnyPatternTest < Minitest::Test
     numbers = [3, 1, 3, 2, 4, 9, 8]
     multiples_of_5 = false
     numbers.each do |number|
-       multiples_of_5 = true if number % 5 == 0
+      multiples_of_5 = true if number % 5 == 0
     end
     refute multiples_of_5
   end

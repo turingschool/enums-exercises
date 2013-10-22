@@ -7,7 +7,7 @@ class AnyTest < Minitest::Test
   def test_has_at_least_one_zero
     numbers = [2, 0, 9, 3, 0, 1]
     has_zero = numbers.any? do |number|
-       number.zero?
+      number.zero?
     end
     assert has_zero
   end

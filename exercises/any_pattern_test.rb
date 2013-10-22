@@ -8,7 +8,7 @@ class AnyPatternTest < Minitest::Test
     numbers = [2, 0, 9, 3, 0, 1]
     has_zero = false
     numbers.each do |number|
-       has_zero = true if number.zero?
+      has_zero = true if number.zero?
     end
     assert has_zero
   end

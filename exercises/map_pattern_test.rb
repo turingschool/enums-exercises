@@ -8,7 +8,7 @@ class MapPatternTest < Minitest::Test
     names = ["alice", "bob", "charlie"]
     capitalized_names = []
     names.each do |name|
-       capitalized_names << name.capitalize
+      capitalized_names << name.capitalize
     end
     assert_equal ["Alice", "Bob", "Charlie"], capitalized_names
   end

@@ -12,7 +12,7 @@ class TestSuite
 
   def name
     pieces = []
-    pieces << method.capitalize
+    pieces.concat method.split("_").map(&:capitalize)
     pieces << "Pattern" if each?
     pieces << "Test"
     pieces.join("")

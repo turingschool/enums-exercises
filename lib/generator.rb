@@ -6,6 +6,7 @@ require_relative 'generator/map_problem'
 require_relative 'generator/select_problem'
 require_relative 'generator/reject_problem'
 require_relative 'generator/any_problem'
+require_relative 'generator/all_problem'
 
 class Generator
   def self.problems
@@ -13,7 +14,8 @@ class Generator
       MapProblem,
       SelectProblem,
       RejectProblem,
-      AnyProblem
+      AnyProblem,
+      AllProblem
     ]
   end
 

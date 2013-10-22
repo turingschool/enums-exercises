@@ -38,10 +38,16 @@ See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop
 1. `exercises/any_pattern_test.rb`
 2. `exercises/any_test.rb`
 
+## The `all?` Pattern
+
+1. `exercises/all_pattern_test.rb`
+2. `exercises/all_test.rb`
+
 ## Other exercises
 
-* `exercises/are_they_all_test.rb`
 * `exercises/find_first_one_test.rb`
+* `exercises/transform_using_group_by_test.rb`
+* `exercises/find_using_max_by_test.rb`
 
 Commit your changes:
 

@@ -3,20 +3,12 @@ require_relative 'enumerable_method'
 require_relative 'problem'
 require_relative 'exercise'
 require_relative 'test_suite'
-require_relative 'generator/map_problem'
-require_relative 'generator/select_problem'
-require_relative 'generator/reject_problem'
-require_relative 'generator/any_problem'
-require_relative 'generator/all_problem'
-require_relative 'generator/none_problem'
-require_relative 'generator/one_problem'
-require_relative 'generator/group_by_problem'
-require_relative 'generator/find_problem'
+<%= enums.map { |enum| "require_relative 'generator/#{enum.name}_problem'" }.join("\n") %>
 
 class Generator
   def self.problems
     [
-      MapProblem, SelectProblem, RejectProblem, AnyProblem, AllProblem, NoneProblem, OneProblem, GroupByProblem, FindProblem
+      <%= enums.map {|enum| enum.class_name + 'Problem'}.join(', ') %>
     ]
   end
 

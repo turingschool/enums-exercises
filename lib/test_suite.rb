@@ -1,9 +1,13 @@
 class TestSuite
-  attr_reader :method, :strategy, :problems
-  def initialize(method, strategy, problems)
-    @method = method.to_s
+  attr_reader :selector, :strategy, :problems
+  def initialize(selector, strategy, problems)
+    @selector = selector
     @strategy = strategy
     @problems = problems
+  end
+
+  def method
+    selector.to_s.chomp('?')
   end
 
   def each?

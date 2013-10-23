@@ -9,6 +9,7 @@ require_relative 'generator/any_problem'
 require_relative 'generator/all_problem'
 require_relative 'generator/group_by_problem'
 require_relative 'generator/find_problem'
+require_relative 'generator/none_problem'
 
 class Generator
   def self.problems
@@ -19,7 +20,8 @@ class Generator
       AnyProblem,
       AllProblem,
       GroupByProblem,
-      FindProblem
+      FindProblem,
+      NoneProblem
     ]
   end
 

@@ -45,15 +45,24 @@ Creating an exercise for an enumerable method requires 4 steps:
 
 ### Step 1: Create the Generator
 
-Create a new file in the `lib/generators/` directory. Name it for the enumerable method that you're writing an exercise for, e.g. if the enumerable method is `count`, the filename will be `count_problem.rb`:
+Run the rake task `rake new[selector]` where `selector` is the name of the method.
 
-```plain
-lib/generators/count_problem.rb
-```
-
-In the `CountProblem` class, create a class method `test_suites`:
+I.e. if you are generating the exercise for the enumerable method `count` then the command is:
 
 ```ruby
+rake new[count]
+```
+
+Remember to add the question mark for predicate methods:
+
+```ruby
+rake new[include?]
+```
+
+Edit the new file in the `lib/generators/` directory to add problem data.
+
+```ruby
+# lib/generators/count_problem.rb
 class CountProblem
   def self.test_suites
     exercise = Exercise.new(:select)
@@ -97,15 +106,13 @@ This is what is used to provide less and less code up front in each test.
 
 ### Step 2: Create the Template Files
 
-Create two templates under `lib/templates/` in a directory named after
+Edit the two templates under `lib/templates/` in a directory named after
 the enumerable method, e.g.:
 
 ```plain
 lib/templates/count/each.rb
 lib/templates/count/enum.rb
 ```
-
-Use the templates under `lib/templates/map/*` as inspiration.
 
 #### The Pattern Using `#each`:
 
@@ -138,7 +145,20 @@ end
 
 ### Step 3: Generate the Test Suites
 
-Run `rake generate`.
+Open up `./lib/problems.rb` and add the selector to the `selectors` method:
+
+```ruby
+def selectors
+  [
+    # ...
+    :count
+  ]
+end
+```
+
+Run `rake meta` to generate the generator.
+
+Run `rake generate` to generate the exercises.
 
 This should create 4 new files:
 
@@ -148,6 +168,8 @@ exercises/count_pattern_test.rb
 test/solutions/count_test.rb
 test/solutions/count_pattern_test.rb
 ```
+
+It should also update the `./lib/generator.rb` file.
 
 ### Step 4: Verify the generated tests
 

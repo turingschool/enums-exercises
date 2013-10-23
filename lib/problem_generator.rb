@@ -1,21 +1,9 @@
 require 'erb'
+require 'delegate'
+require './lib/enumerable_method'
 
-class ProblemGenerator
-  attr_reader :method
-
-  def initialize(method)
-    @method = method
-  end
-
-  def name
-    method.to_s.chomp('?')
-  end
-
-  def class_name
-    name.split("_").map(&:capitalize).join('')
-  end
-
-  def render
+class ProblemGenerator < SimpleDelegator
+  def to_s
     ERB.new(File.read(template)).result(binding).chomp
   end
 
@@ -25,7 +13,7 @@ class ProblemGenerator
 
   def write
     File.open("./lib/generator/#{name}_problem.rb", 'wb') do |file|
-      file.write render
+      file.write to_s
     end
     system("cp -r ./lib/templates/method ./lib/templates/#{name}")
   end

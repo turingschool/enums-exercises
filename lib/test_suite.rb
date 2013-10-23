@@ -1,13 +1,10 @@
 class TestSuite
-  attr_reader :selector, :strategy, :problems
+  attr_reader :selector, :strategy, :problems, :enum
   def initialize(selector, strategy, problems)
     @selector = selector
     @strategy = strategy
     @problems = problems
-  end
-
-  def method
-    selector.to_s.chomp('?')
+    @enum = EnumerableMethod.new(selector)
   end
 
   def each?
@@ -15,23 +12,22 @@ class TestSuite
   end
 
   def name
-    pieces = []
-    pieces.concat method.split("_").map(&:capitalize)
-    pieces << "Pattern" if each?
-    pieces << "Test"
-    pieces.join("")
+    s = ""
+    s << enum.class_name
+    s << "Pattern" if each?
+    s << "Test"
   end
 
   def filename
     pieces = []
-    pieces << method
+    pieces << enum.name
     pieces << "pattern" if each?
     pieces << "test.rb"
     pieces.join("_")
   end
 
   def template_name
-    "./lib/templates/#{method}/#{strategy}.erb"
+    "./lib/templates/#{enum.name}/#{strategy}.erb"
   end
 
   def render(template)

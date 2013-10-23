@@ -1,6 +1,7 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
+require './lib/enumerable_method'
 require './lib/test_suite'
 
 class TestSuiteTest < Minitest::Test

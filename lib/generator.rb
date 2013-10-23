@@ -1,4 +1,5 @@
 require 'erb'
+require_relative 'enumerable_method'
 require_relative 'problem'
 require_relative 'exercise'
 require_relative 'test_suite'

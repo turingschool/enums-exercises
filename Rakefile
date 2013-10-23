@@ -13,7 +13,7 @@ end
 desc "generate a new generator"
 task :new, :name do |t, args|
   require './lib/problem_generator'
-  ProblemGenerator.new(args[:name].to_sym).write
+  ProblemGenerator.new(EnumerableMethod.new(args[:name].to_sym)).write
 end
 
 task default: :test

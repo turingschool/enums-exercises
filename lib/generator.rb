@@ -8,6 +8,7 @@ require_relative 'generator/reject_problem'
 require_relative 'generator/any_problem'
 require_relative 'generator/all_problem'
 require_relative 'generator/none_problem'
+require_relative 'generator/one_problem'
 require_relative 'generator/group_by_problem'
 require_relative 'generator/find_problem'
 
@@ -20,6 +21,7 @@ class Generator
       AnyProblem,
       AllProblem,
       NoneProblem,
+      OneProblem,
       GroupByProblem,
       FindProblem
     ]

@@ -16,7 +16,8 @@ class Problems
       :none?,
       :one?,
       :group_by,
-      :find
+      :find,
+      :sort_by
     ]
   end
 

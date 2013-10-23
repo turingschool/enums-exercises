@@ -12,11 +12,12 @@ require_relative 'generator/none_problem'
 require_relative 'generator/one_problem'
 require_relative 'generator/group_by_problem'
 require_relative 'generator/find_problem'
+require_relative 'generator/sort_by_problem'
 
 class Generator
   def self.problems
     [
-      MapProblem, SelectProblem, RejectProblem, AnyProblem, AllProblem, NoneProblem, OneProblem, GroupByProblem, FindProblem
+      MapProblem, SelectProblem, RejectProblem, AnyProblem, AllProblem, NoneProblem, OneProblem, GroupByProblem, FindProblem, SortByProblem
     ]
   end
 

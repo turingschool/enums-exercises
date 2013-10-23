@@ -10,4 +10,10 @@ task :generate do
   Generator.generate
 end
 
+desc "generate a new generator"
+task :new, :name do |t, args|
+  require './lib/problem_generator'
+  ProblemGenerator.new(args[:name].to_sym).write
+end
+
 task default: :test

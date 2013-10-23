@@ -43,6 +43,11 @@ See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop
 1. `exercises/all_pattern_test.rb`
 2. `exercises/all_test.rb`
 
+## The `none?` Pattern
+
+1. `exercises/none_pattern_test.rb`
+2. `exercises/none_test.rb`
+
 ## The `group_by` Pattern
 
 1. `exercises/group_by_pattern_test.rb`

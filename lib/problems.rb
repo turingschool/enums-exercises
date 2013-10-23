@@ -17,6 +17,7 @@ class Problems
       :one?,
       :group_by,
       :find,
+      :count,
       :sort_by
     ]
   end

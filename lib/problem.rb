@@ -1,12 +1,13 @@
 class Problem
   attr_reader :name, :input_variable, :input,
-    :output_variable, :output, :block
+    :output_variable, :output, :block, :initial_value
 
-  def initialize(name, input, output, code)
+  def initialize(name, input, output, code, options = {})
     @name = name
     @input_variable, @input = input.to_a.first
     @output_variable, @output = output.to_a.first
     @block = code
+    @initial_value = options[:initial_value]
   end
 
   def block_variable

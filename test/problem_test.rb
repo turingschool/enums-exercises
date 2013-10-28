@@ -40,6 +40,11 @@ class ExerciseTest < Minitest::Test
     assert_equal "letter", exercise.block_variable
   end
 
+  def test_optional_initial_value
+    exercise = Problem.new("capitalize", input, output, "letter.upcase", {initial_value: 'freddy'})
+    assert_equal 'freddy', exercise.initial_value
+  end
+
   def test_defaults
     ex = exercise
     refute ex.assignment?

@@ -18,7 +18,8 @@ class Problems
       :group_by,
       :find,
       :count,
-      :sort_by
+      :sort_by,
+      :reduce
     ]
   end
 

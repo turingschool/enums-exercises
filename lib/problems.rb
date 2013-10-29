@@ -19,7 +19,8 @@ class Problems
       :find,
       :count,
       :sort_by,
-      :reduce
+      :reduce,
+      :zip
     ]
   end
 

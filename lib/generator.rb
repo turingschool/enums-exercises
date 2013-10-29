@@ -15,11 +15,12 @@ require_relative 'generator/find_problem'
 require_relative 'generator/count_problem'
 require_relative 'generator/sort_by_problem'
 require_relative 'generator/reduce_problem'
+require_relative 'generator/zip_problem'
 
 class Generator
   def self.problems
     [
-      MapProblem, SelectProblem, RejectProblem, AnyProblem, AllProblem, NoneProblem, OneProblem, GroupByProblem, FindProblem, CountProblem, SortByProblem, ReduceProblem
+      MapProblem, SelectProblem, RejectProblem, AnyProblem, AllProblem, NoneProblem, OneProblem, GroupByProblem, FindProblem, CountProblem, SortByProblem, ReduceProblem, ZipProblem
     ]
   end
 

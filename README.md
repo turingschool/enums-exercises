@@ -73,6 +73,16 @@ See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop
 1. `exercises/sort_by_pattern_test.rb`
 2. `exercises/sort_by_test.rb`
 
+## The `reduce` Pattern
+
+1. `exercises/reduce_pattern_test.rb`
+2. `exercises/reduce_test.rb`
+
+## The `zip` Pattern
+
+1. `exercises/zip_pattern_test.rb`
+2. `exercises/zip_test.rb`
+
 ## Other exercises
 
 * `exercises/find_using_max_by_test.rb`

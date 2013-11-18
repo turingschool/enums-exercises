@@ -14,10 +14,6 @@ Create a branch so that you're not changing `master`:
 $ git checkout -b make-tests-pass
 ```
 
-## Basic Concepts
-
-See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop through a collection.
-
 ## The `map` Pattern
 
 1. `exercises/map_pattern_test.rb`
@@ -86,6 +82,7 @@ See `basic_enums_test.rb` -- we will talk about using `times` and `each` to loop
 ## Other exercises
 
 * `exercises/find_using_max_by_test.rb`
+* `exercises/basic_enums_test.rb`
 
 Commit your changes:
 

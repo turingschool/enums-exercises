@@ -60,11 +60,11 @@ class AllPatternTest < Minitest::Test
 
   def test_not_all_uppercase
     words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
-    all_empty = true
+    all_caps = true
     words.each do |word|
-      all_empty = false unless word.empty?
+      all_caps = false unless word.upcase != word
     end
-    refute all_empty
+    refute all_caps
   end
 
   def test_all_lies

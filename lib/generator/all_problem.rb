@@ -47,8 +47,8 @@ class AllProblem
     exercise << Problem.new(
       "not_all_uppercase",
       {"words" => ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]},
-      {"all_empty" => "refute"},
-      "word.empty?"
+      {"all_caps" => "refute"},
+      "word.upcase != word"
     )
 
     exercise << Problem.new(

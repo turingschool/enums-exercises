@@ -55,7 +55,7 @@ class AllPatternTest < Minitest::Test
     skip
     words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
     # Your code goes here
-    refute all_empty
+    refute all_upcase
   end
 
   def test_all_lies

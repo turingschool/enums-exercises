@@ -31,13 +31,13 @@ class ReducePatternTest < Minitest::Test
     assert_equal 210, product
   end
 
-  def test_divide_list_of_numbers
+  def test_divide_560_by_a_bunch_of_numbers
     numbers = [2, 2, 2, 5, 7]
-    quotient = 560
+    result = 560
     numbers.each do |number|
-      quotient = quotient / number
+      result = result / number
     end
-    assert_equal 2, quotient
+    assert_equal 2, result
   end
 
   def test_capitize_keywords

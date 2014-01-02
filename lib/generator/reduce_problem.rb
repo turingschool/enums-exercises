@@ -27,10 +27,10 @@ class ReduceProblem
     ).assignment!
 
     exercise << Problem.new(
-      "divide_list_of_numbers",
+      "divide_560_by_a_bunch_of_numbers",
       {"numbers" => [2, 2, 2, 5, 7]},
-      {"quotient" => 2},
-      "quotient / number",
+      {"result" => 2},
+      "result / number",
       {:initial_value => 560}
     )
 

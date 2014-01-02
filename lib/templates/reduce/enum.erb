@@ -3,6 +3,9 @@
     skip
     <% end %>
     <%= input_variable %> = <%= input %>
+    <% if assignment? %>
+    # initial value is <%= initial_value %>
+    <% end %>
     <% if loop? %>
     <%= output_variable %> = <%= input_variable %>.reduce(<%= initial_value %>) do |<%= output_variable %>, <%= block_variable %>|
       <% if example? %>

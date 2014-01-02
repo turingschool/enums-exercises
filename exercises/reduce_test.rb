@@ -6,6 +6,7 @@ class ReduceTest < Minitest::Test
 
   def test_sum_a_list_of_numbers
     numbers = [32, 1, 21, 5, 81, 333]
+    # initial value is 0
     sum = numbers.reduce(0) do |sum, number|
       sum + number
     end
@@ -14,6 +15,7 @@ class ReduceTest < Minitest::Test
 
   def test_subtract_list_of_numbers
     numbers = [28, 12, 38, 1, 91]
+    # initial value is 0
     difference = numbers.reduce(0) do |difference, number|
       # Your code goes here
     end
@@ -23,6 +25,7 @@ class ReduceTest < Minitest::Test
   def test_multiply_list_of_numbers
     skip
     numbers = [2, 3, 5, 7]
+    # initial value is 1
     # Your code goes here
     assert_equal 210, product
   end
@@ -30,6 +33,7 @@ class ReduceTest < Minitest::Test
   def test_capitalize_keywords_in_phrase_one_fish_two_fish_red_fish_blue_fish
     skip
     keywords = ["fish", "blue"]
+    # initial value is 'one fish two fish red fish blue fish'
     # Your code goes here
     assert_equal 'one FISH two FISH red FISH BLUE FISH', phrase
   end
@@ -37,6 +41,7 @@ class ReduceTest < Minitest::Test
   def test_divide_560_by_a_bunch_of_numbers
     skip
     numbers = [2, 2, 2, 5, 7]
+    # initial value is 560
     # Your code goes here
     assert_equal 2, result
   end
@@ -44,6 +49,7 @@ class ReduceTest < Minitest::Test
   def test_subtract_smallest_values_from_100
     skip
     elements = [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]
+    # initial value is 100
     # Your code goes here
     assert_equal 88, difference
   end

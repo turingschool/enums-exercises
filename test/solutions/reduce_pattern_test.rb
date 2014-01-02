@@ -49,15 +49,6 @@ class ReducePatternTest < Minitest::Test
     assert_equal 2, result
   end
 
-  def test_add_second_value
-    elements = [["a", 1], ["b", 9], ["c", 21]]
-    sum = 0
-    elements.each do |element|
-      sum = sum + element[1]
-    end
-    assert_equal 31, sum
-  end
-
   def test_subtract_smallest_value
     elements = [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]
     difference = 100
@@ -65,6 +56,15 @@ class ReducePatternTest < Minitest::Test
       difference = difference - element.min
     end
     assert_equal 88, difference
+  end
+
+  def test_add_second_value
+    elements = [["a", 1], ["b", 9], ["c", 21]]
+    sum = 0
+    elements.each do |element|
+      sum = sum + element[1]
+    end
+    assert_equal 31, sum
   end
 
 end

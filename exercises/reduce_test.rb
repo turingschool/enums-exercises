@@ -41,18 +41,18 @@ class ReduceTest < Minitest::Test
     assert_equal 2, result
   end
 
-  def test_add_second_value
-    skip
-    elements = [["a", 1], ["b", 9], ["c", 21]]
-    # Your code goes here
-    assert_equal 31, sum
-  end
-
   def test_subtract_smallest_value
     skip
     elements = [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]
     # Your code goes here
     assert_equal 88, difference
+  end
+
+  def test_add_second_value
+    skip
+    elements = [["a", 1], ["b", 9], ["c", 21]]
+    # Your code goes here
+    assert_equal 31, sum
   end
 
 end

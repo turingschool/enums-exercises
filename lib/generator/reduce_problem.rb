@@ -40,7 +40,15 @@ class ReduceProblem
       {"result" => 2},
       "result / number",
       {:initial_value => 560}
-    )
+    ).assignment!
+
+    exercise << Problem.new(
+      "subtract_smallest_value",
+      {"elements" => [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]},
+      {"difference" => 88},
+      "difference - element.min",
+      {:initial_value => 100}
+    ).assignment!
 
     exercise << Problem.new(
       "add_second_value",
@@ -49,15 +57,6 @@ class ReduceProblem
       "sum + element[1]",
       {:initial_value => 0}
     )
-
-    exercise << Problem.new(
-      "subtract_smallest_value",
-      {"elements" => [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]},
-      {"difference" => 88},
-      "difference - element.min",
-      {:initial_value => 100}
-    )
-
     exercise.test_suites
   end
 end

@@ -31,15 +31,6 @@ class ReducePatternTest < Minitest::Test
     assert_equal 210, product
   end
 
-  def test_divide_560_by_a_bunch_of_numbers
-    numbers = [2, 2, 2, 5, 7]
-    result = 560
-    numbers.each do |number|
-      result = result / number
-    end
-    assert_equal 2, result
-  end
-
   def test_capitalize_keywords
     keywords = ["fish", "blue"]
     phrase = 'one fish two fish red fish blue fish'
@@ -47,6 +38,15 @@ class ReducePatternTest < Minitest::Test
       phrase = phrase.gsub(keyword, keyword.upcase)
     end
     assert_equal 'one FISH two FISH red FISH BLUE FISH', phrase
+  end
+
+  def test_divide_560_by_a_bunch_of_numbers
+    numbers = [2, 2, 2, 5, 7]
+    result = 560
+    numbers.each do |number|
+      result = result / number
+    end
+    assert_equal 2, result
   end
 
   def test_add_second_value

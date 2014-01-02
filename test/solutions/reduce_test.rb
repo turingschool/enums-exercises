@@ -28,20 +28,20 @@ class ReduceTest < Minitest::Test
     assert_equal 210, product
   end
 
-  def test_divide_560_by_a_bunch_of_numbers
-    numbers = [2, 2, 2, 5, 7]
-    result = numbers.reduce(560) do |result, number|
-      result / number
-    end
-    assert_equal 2, result
-  end
-
   def test_capitalize_keywords
     keywords = ["fish", "blue"]
     phrase = keywords.reduce('one fish two fish red fish blue fish') do |phrase, keyword|
       phrase.gsub(keyword, keyword.upcase)
     end
     assert_equal 'one FISH two FISH red FISH BLUE FISH', phrase
+  end
+
+  def test_divide_560_by_a_bunch_of_numbers
+    numbers = [2, 2, 2, 5, 7]
+    result = numbers.reduce(560) do |result, number|
+      result / number
+    end
+    assert_equal 2, result
   end
 
   def test_add_second_value

@@ -30,18 +30,19 @@ class ReducePatternTest < Minitest::Test
     assert_equal 210, product
   end
 
+  def test_capitalize_keywords
+    skip
+    keywords = ["fish", "blue"]
+    phrase = 'one fish two fish red fish blue fish'
+    # Your code goes here
+    assert_equal 'one FISH two FISH red FISH BLUE FISH', phrase
+  end
+
   def test_divide_560_by_a_bunch_of_numbers
     skip
     numbers = [2, 2, 2, 5, 7]
     # Your code goes here
     assert_equal 2, result
-  end
-
-  def test_capitalize_keywords
-    skip
-    keywords = ["fish", "blue"]
-    # Your code goes here
-    assert_equal 'one FISH two FISH red FISH BLUE FISH', phrase
   end
 
   def test_add_second_value

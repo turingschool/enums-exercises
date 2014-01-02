@@ -27,19 +27,19 @@ class ReduceProblem
     ).assignment!
 
     exercise << Problem.new(
-      "divide_560_by_a_bunch_of_numbers",
-      {"numbers" => [2, 2, 2, 5, 7]},
-      {"result" => 2},
-      "result / number",
-      {:initial_value => 560}
-    )
-
-    exercise << Problem.new(
       "capitalize_keywords",
       {"keywords" => ["fish", "blue"]},
       {"phrase" => "'one FISH two FISH red FISH BLUE FISH'"},
       "phrase.gsub(keyword, keyword.upcase)",
       {:initial_value => "'one fish two fish red fish blue fish'"}
+    ).assignment!
+
+    exercise << Problem.new(
+      "divide_560_by_a_bunch_of_numbers",
+      {"numbers" => [2, 2, 2, 5, 7]},
+      {"result" => 2},
+      "result / number",
+      {:initial_value => 560}
     )
 
     exercise << Problem.new(

@@ -37,7 +37,7 @@ class ReducePatternTest < Minitest::Test
     assert_equal 2, result
   end
 
-  def test_capitize_keywords
+  def test_capitalize_keywords
     skip
     keywords = ["fish", "blue"]
     # Your code goes here

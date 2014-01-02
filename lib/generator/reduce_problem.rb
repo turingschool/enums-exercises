@@ -35,7 +35,7 @@ class ReduceProblem
     )
 
     exercise << Problem.new(
-      "capitize_keywords",
+      "capitalize_keywords",
       {"keywords" => ["fish", "blue"]},
       {"phrase" => "'one FISH two FISH red FISH BLUE FISH'"},
       "phrase.gsub(keyword, keyword.upcase)",

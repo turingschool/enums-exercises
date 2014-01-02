@@ -40,7 +40,7 @@ class ReducePatternTest < Minitest::Test
     assert_equal 2, result
   end
 
-  def test_capitize_keywords
+  def test_capitalize_keywords
     keywords = ["fish", "blue"]
     phrase = 'one fish two fish red fish blue fish'
     keywords.each do |keyword|

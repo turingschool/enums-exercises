@@ -27,7 +27,7 @@ class ReduceProblem
     ).assignment!
 
     exercise << Problem.new(
-      "capitalize_keywords",
+      "capitalize_keywords_in_phrase_one_fish_two_fish_red_fish_blue_fish",
       {"keywords" => ["fish", "blue"]},
       {"phrase" => "'one FISH two FISH red FISH BLUE FISH'"},
       "phrase.gsub(keyword, keyword.upcase)",
@@ -43,7 +43,7 @@ class ReduceProblem
     ).assignment!
 
     exercise << Problem.new(
-      "subtract_smallest_value",
+      "subtract_smallest_values_from_100",
       {"elements" => [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]},
       {"difference" => 88},
       "difference - element.min",
@@ -51,7 +51,7 @@ class ReduceProblem
     ).assignment!
 
     exercise << Problem.new(
-      "add_second_value",
+      "add_all_the_second_values_together",
       {"elements" => [['a', 1], ['b', 9], ['c', 21]]},
       {"sum" => 31},
       "sum + element[1]",

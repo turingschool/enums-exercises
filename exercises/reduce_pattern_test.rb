@@ -30,7 +30,7 @@ class ReducePatternTest < Minitest::Test
     assert_equal 210, product
   end
 
-  def test_capitalize_keywords
+  def test_capitalize_keywords_in_phrase_one_fish_two_fish_red_fish_blue_fish
     skip
     keywords = ["fish", "blue"]
     phrase = 'one fish two fish red fish blue fish'
@@ -46,7 +46,7 @@ class ReducePatternTest < Minitest::Test
     assert_equal 2, result
   end
 
-  def test_subtract_smallest_value
+  def test_subtract_smallest_values_from_100
     skip
     elements = [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]
     difference = 100
@@ -54,7 +54,7 @@ class ReducePatternTest < Minitest::Test
     assert_equal 88, difference
   end
 
-  def test_add_second_value
+  def test_add_all_the_second_values_together
     skip
     elements = [["a", 1], ["b", 9], ["c", 21]]
     # Your code goes here

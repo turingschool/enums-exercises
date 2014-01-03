@@ -37,8 +37,8 @@ class ReduceProblem
     exercise << Problem.new(
       "divide_560_by_a_bunch_of_numbers",
       {"numbers" => [2, 2, 2, 5, 7]},
-      {"result" => 2},
-      "result / number",
+      {"quotient" => 2},
+      "quotient / number",
       {:initial_value => 560}
     ).assignment!
 
@@ -56,7 +56,7 @@ class ReduceProblem
       {"sum" => 31},
       "sum + element[1]",
       {:initial_value => 0}
-    )
+    ).assignment!
     exercise.test_suites
   end
 end

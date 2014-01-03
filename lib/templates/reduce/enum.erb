@@ -3,11 +3,11 @@
     skip
     <% end %>
     <%= input_variable %> = <%= input %>
-    <% if assignment? %>
+    <% if !loop? && assignment? %>
     # initial value is <%= initial_value %>
     <% end %>
     <% if loop? %>
-    <%= output_variable %> = <%= input_variable %>.reduce(<%= initial_value %>) do |<%= output_variable %>, <%= block_variable %>|
+    result = <%= input_variable %>.reduce(<%= initial_value %>) do |<%= output_variable %>, <%= block_variable %>|
       <% if example? %>
       <%= block %>
       <% else %>
@@ -17,5 +17,5 @@
     <% else %>
     # Your code goes here
     <% end %>
-    assert_equal <%= output %>, <%= output_variable %>
+    assert_equal <%= output %>, result
   end

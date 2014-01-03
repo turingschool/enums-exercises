@@ -41,9 +41,9 @@ class ReducePatternTest < Minitest::Test
   def test_divide_560_by_a_bunch_of_numbers
     skip
     numbers = [2, 2, 2, 5, 7]
-    result = 560
+    quotient = 560
     # Your code goes here
-    assert_equal 2, result
+    assert_equal 2, quotient
   end
 
   def test_subtract_smallest_values_from_100
@@ -57,6 +57,7 @@ class ReducePatternTest < Minitest::Test
   def test_add_all_the_second_values_together
     skip
     elements = [["a", 1], ["b", 9], ["c", 21]]
+    sum = 0
     # Your code goes here
     assert_equal 31, sum
   end

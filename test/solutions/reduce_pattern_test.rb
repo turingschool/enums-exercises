@@ -42,11 +42,11 @@ class ReducePatternTest < Minitest::Test
 
   def test_divide_560_by_a_bunch_of_numbers
     numbers = [2, 2, 2, 5, 7]
-    result = 560
+    quotient = 560
     numbers.each do |number|
-      result = result / number
+      quotient = quotient / number
     end
-    assert_equal 2, result
+    assert_equal 2, quotient
   end
 
   def test_subtract_smallest_values_from_100

@@ -61,7 +61,7 @@ class SortByPatternTest < Minitest::Test
   end
 
   def test_sort_by_proximity_to_ten
-    prices = [3.02, 9.91, 7.9, 10.01, 11.0]
+    prices = [3.02, 9.91, 17.9, 10.01, 11.0]
     transformed = []
     prices.each do |price|
       transformed << [(10.0 - price).abs, price]
@@ -71,7 +71,7 @@ class SortByPatternTest < Minitest::Test
     transformed.each do |sort_key, price|
       sorted << price
     end
-    assert_equal [10.01, 9.91, 11.0, 7.9, 3.02], sorted
+    assert_equal [10.01, 9.91, 11.0, 3.02, 17.9], sorted
   end
 
   def test_sort_by_number_of_cents

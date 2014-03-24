@@ -27,7 +27,7 @@ class AllTest < Minitest::Test
     assert all_gone
   end
 
-  def test_all_gone
+  def test_not_all_gone
     skip
     words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
     # Your code goes here

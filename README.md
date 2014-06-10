@@ -1,5 +1,7 @@
 # Enums Exercises
 
+## Setup
+
 [Fork](https://github.com/JumpstartLab/enums-exercises/fork) and clone the `enums-exercises` repository.
 
 ```bash
@@ -14,83 +16,48 @@ Create a branch so that you're not changing `master`:
 $ git checkout -b make-tests-pass
 ```
 
-## The `map` Pattern
+## Solving Exercises
+
+For each method of interest there are two files of interest. Let's look at `map` as an example:
 
 1. `exercises/map_pattern_test.rb`
 2. `exercises/map_test.rb`
 
-## The `select` Pattern
+In the `map_pattern_test.rb` you'll find a collection of exercises which do what `map` is good at,
+but they do it just with `each`. Then in `map_test.rb` you'll find the same examples using `map`.
 
-1. `exercises/select_pattern_test.rb`
-2. `exercises/select_test.rb`
+We recommend you...
 
-## The `reject` Pattern
+* Open your text editor with two panes (left and right)
+* In the left pane, open the pattern file like `map_pattern_test.rb`
+* In the right pane, open the matching file like `map_test.rb`
+* Run the `map_pattern_test.rb` and solve the first exercise
+* Run the `map_test.rb` and solve the same exercise
+* Repeat for each matching pair of exercises
+* Commit your solutions after finishing each file
 
-1. `exercises/reject_pattern_test.rb`
-2. `exercises/reject_test.rb`
+## Work Order
 
-## The `any?` Pattern
+You'll find the exercises in `exercises/` and we recommend working in this order:
 
-1. `exercises/any_pattern_test.rb`
-2. `exercises/any_test.rb`
+* `map`
+* `select`
+* `reject`
+* `any?`
+* `all?`
+* `none?`
+* `one?`
+* `group_by`
+* `find`
+* `count`
+* `sort_by`
+* `reduce`
+* `zip`
 
-## The `all?` Pattern
-
-1. `exercises/all_pattern_test.rb`
-2. `exercises/all_test.rb`
-
-## The `none?` Pattern
-
-1. `exercises/none_pattern_test.rb`
-2. `exercises/none_test.rb`
-
-## The `one?` Pattern
-
-1. `exercises/one_pattern_test.rb`
-2. `exercises/one_test.rb`
-
-## The `group_by` Pattern
-
-1. `exercises/group_by_pattern_test.rb`
-2. `exercises/group_by_test.rb`
-
-## The `find` Pattern
-
-1. `exercises/find_pattern_test.rb`
-2. `exercises/find_test.rb`
-
-## The `count` Pattern
-
-1. `exercises/count_pattern_test.rb`
-2. `exercises/count_test.rb`
-
-## The `sort_by` Pattern
-
-1. `exercises/sort_by_pattern_test.rb`
-2. `exercises/sort_by_test.rb`
-
-## The `reduce` Pattern
-
-1. `exercises/reduce_pattern_test.rb`
-2. `exercises/reduce_test.rb`
-
-## The `zip` Pattern
-
-1. `exercises/zip_pattern_test.rb`
-2. `exercises/zip_test.rb`
-
-## Other exercises
+### Other exercises
 
 * `exercises/find_using_max_by_test.rb`
 * `exercises/basic_enums_test.rb`
-
-Commit your changes:
-
-```bash
-$ git diff # to look at the changes
-$ git add -A # to add everything if you like what you see
-$ git commit -m "Make tests pass using Enumerable#each"
-```
 
 ## Create Your Own Adventure
 
@@ -172,7 +139,7 @@ $ git reset --hard upstream/master
 
 The MIT License (MIT)
 
-Copyright (c) <year> <copyright holders>
+Copyright (c) 2014 Jumpstart Lab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

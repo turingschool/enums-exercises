@@ -16,6 +16,124 @@ Create a branch so that you're not changing `master`:
 $ git checkout -b make-tests-pass
 ```
 
+## Contributing Patches
+
+### Fixing Errors in Exercises
+
+If you find an error in one of the exercises, then it needs to be fixed upstream in the generators or templates.
+
+For example, someone discovered that there were two tests with the same name in the `all_pattern_test.rb` exercise:
+
+```ruby
+def test_all_gone
+  skip
+  words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
+  all_gone = true
+  # Your code goes here
+  assert all_gone
+end
+
+def test_all_gone
+  skip
+  words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
+  # Your code goes here
+  refute all_gone
+end
+```
+
+The second test should have been named `test_not_all_gone`.
+
+In order to fix this, we need to locate the problem generator: `lib/generator/all_problem.rb`.
+
+```ruby
+exercise << Problem.new(
+  "all_gone",
+  {"words" => %w(gone gone gone gone gone gone gone)},
+  {"all_gone" => "assert"},
+  "word == 'gone'"
+).assignment!
+
+exercise << Problem.new(
+  "all_gone",
+  {"words" => %w(gone gone gone gone gone there gone gone)},
+  {"all_gone" => "refute"},
+  "word == 'gone'"
+)
+```
+
+The name of the second problem can be changed.
+
+Then regenerate the exercises with:
+
+```bash
+rake generate
+```
+
+Finally, run the tests:
+
+```bash
+rake test
+```
+
+### Creating New Exercises
+
+Check out master:
+
+```bash
+$ git checkout master
+```
+
+Create a new branch:
+
+```bash
+$ git checkout -b new-exercises
+```
+
+Make up one extra test for each test suite. Remember to delete the implementation once it's passing, and add a `skip` to it.
+
+```bash
+$ git diff
+$ git add -A
+$ git commit -m "Add more exercises"
+```
+
+Push your branch up to GitHub:
+
+```bash
+$ git push -u origin new-exercises
+```
+
+Submit a pull request (go to the front page of your own `enums-exercises` repository, there should be a button to compare/create a pull request for the branch that you just pushed up).
+
+### Keeping in sync with the upstream repository
+
+`origin` is your fork of the project. We'll need to connect to the upstream repository.
+
+To do this, add a new remote named upstream that points to the Turing School repository:
+
+```bash
+$ git remote add upstream git@github.com:turingschool/enums-exercises.git
+```
+
+Then pull down the updated version of upstream:
+
+```bash
+$ git fetch upstream
+```
+
+And now make sure you're on master:
+
+```bash
+$ git checkout master
+$ git branch # should say *master
+```
+
+Make master point to the exact commit that upstream/master is pointing at:
+
+```bash
+$ git reset --hard upstream/master
+```
+
 ## Solving Exercises
 
 For each method of interest there are two files of interest. Let's look at `map` as an example:
@@ -54,107 +172,8 @@ You'll find the exercises in `exercises/` and we recommend working in this order
 * `reduce`
 * `zip`
 
-### Other exercises
-
-* `exercises/find_using_max_by_test.rb`
-* `exercises/basic_enums_test.rb`
-
-## Create Your Own Adventure
-
-Check out master:
-
-```bash
-$ git checkout master
-```
-
-Create a new branch:
-
-```bash
-$ git checkout -b new-exercises
-```
-
-Make up one extra test for each test suite. Remember to delete the implementation once it's passing, and add a `skip` to it.
-
-```bash
-$ git diff
-$ git add -A
-$ git commit -m "Add more exercises"
-```
-
-Push your branch up to GitHub:
-
-```bash
-$ git push -u origin new-exercises
-```
-
-Submit a pull request (go to the front page of your own `enums-exercises` repository, there should be a button to compare/create a pull request for the branch that you just pushed up).
-
-## Using Other Enumerable Methods
-
-Now go back to your `make-tests-pass` branch:
-
-```bash
-$ git checkout make-tests-pass
-```
-
-We will use alternate Enumerable methods to solve the same problems as before:
-
-* **map**: `transform_collections_test.rb`
-* **select**: `pick_desired_values_test.rb`
-* **reject**: `filter_unwanted_values_test.rb`
-* **any?**: `are_there_any_test.rb`
-* **all?**: `are_they_all_test.rb`
-* **find**: `find_first_one_test.rb`
-
-## Keeping in sync with the upstream repository
-
-`origin` is your fork of the project. We'll need to connect to the upstream repository.
-
-To do this, add a new remote named upstream that points to the JumpstartLab:
-
-```bash
-$ git remote add upstream git@github.com:JumpstartLab/enums-exercises.git
-```
-
-Then pull down the updated version of upstream:
-
-```bash
-$ git fetch upstream
-```
-
-And now make sure you're on master:
-
-```bash
-$ git checkout master
-$ git branch # should say *master
-```
-
-Make master point to the exact commit that upstream/master is pointing at:
-
-```bash
-$ git reset --hard upstream/master
-```
-
 ## License
 
 The MIT License (MIT)
 
 Copyright (c) 2014 Jumpstart Lab
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.

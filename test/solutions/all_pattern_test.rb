@@ -31,7 +31,7 @@ class AllPatternTest < Minitest::Test
     assert all_gone
   end
 
-  def test_all_gone
+  def test_not_all_gone
     words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
     all_gone = true
     words.each do |word|

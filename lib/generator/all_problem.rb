@@ -24,7 +24,7 @@ class AllProblem
     ).assignment!
 
     exercise << Problem.new(
-      "all_gone",
+      "not_all_gone",
       {"words" => %w(gone gone gone gone gone there gone gone)},
       {"all_gone" => "refute"},
       "word == 'gone'"

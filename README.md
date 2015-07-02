@@ -5,7 +5,7 @@
 [Fork](https://github.com/JumpstartLab/enums-exercises/fork) and clone the `enums-exercises` repository.
 
 ```bash
-$ cd ~/your/project/dir
+$ cd ~/turing/1module/
 $ git clone git@github.com:USERNAME/enums-exercises.git
 $ cd enums-exercises
 ```
@@ -15,6 +15,37 @@ Create a branch so that you're not changing `master`:
 ```bash
 $ git checkout -b make-tests-pass
 ```
+
+## Instructions
+
+After cloning the repository down, and checking out a new branch, we are ready
+to get started on these enumerables exercises.
+
+The goal of these exercises is to help you understand enumerables, both how
+they work and how they can be replicated through the use of the #each, the
+basis of all enumerables.
+
+You should perform the exercises in the order below:
+
+* `map`
+* `select`
+* `reject`
+* `any?`
+* `all?`
+* `none?`
+* `one?`
+* `group_by`
+* `find`
+* `count`
+* `sort_by`
+* `reduce`
+* `zip`
+
+You should perform the pattern test first, and then the test.
+
+For example, you should work on `map_pattern_test.rb` followed by `map_test.rb`
+Upon completing that, you should do `select_pattern_test.rb` and then
+`select_test.rb` and so forth.
 
 ## Contributing Patches
 

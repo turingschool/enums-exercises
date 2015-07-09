@@ -29,7 +29,7 @@ You should perform the exercises in the order below:
 
 * `map`
 * `select`
-* `detect`
+* `find` (aka `detect`)
 * `sort_by`
 * `count`
 * `reject`

@@ -47,6 +47,14 @@ For example, you should work on `map_pattern_test.rb` followed by `map_test.rb`
 Upon completing that, you should do `select_pattern_test.rb` and then
 `select_test.rb` and so forth.
 
+After successfully cloning the repo and changing into the root directory, you
+can type:
+
+```bash
+$ ruby exercises/map_pattern_test.rb
+```
+and start making those skipped tests pass.
+
 ## Contributing Patches
 
 ### Fixing Errors in Exercises

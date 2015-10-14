@@ -1,5 +1,21 @@
 # Enums Exercises
 
+## Setup
+
+[Fork](https://github.com/JumpstartLab/enums-exercises/fork) and clone the `enums-exercises` repository.
+
+```bash
+$ cd ~/turing/1module/
+$ git clone git@github.com:USERNAME/enums-exercises.git
+$ cd enums-exercises
+```
+
+Create a branch so that you're not changing `master`:
+
+```bash
+$ git checkout -b make-tests-pass
+```
+
 ## How the Exercises are Organized
 
 These exercises are broken up by method -- each enumerable method will be covered by
@@ -12,6 +28,13 @@ so by looking at the methods in this way, we'll gain some insight
 into how each method is put together under the hood.
 
 ## Solving the Exercises
+
+After cloning the repository down, and checking out a new branch, we are ready
+to get started on these enumerables exercises.
+
+The goal of these exercises is to help you understand enumerables, both how
+they work and how they can be replicated through the use of the #each, the
+basis of all enumerables.
 
 For each method, there are two files of interest. Let's look at `map` as an example:
 
@@ -33,42 +56,7 @@ To run each example, we'll simply use the `ruby` command in combination with the
 path to that file. For example to run the 2 map files above, we would use:
 `ruby exercises/map_pattern_test.rb` and `ruby exercises/map_test.rb`, respectively.
 
-__Recommended Workflow__
-
-Here's how we recommend you work through the exercises:
-
-* Open your text editor with two panes (left and right)
-* In the left pane, open the pattern file like `map_pattern_test.rb`
-* In the right pane, open the matching file like `map_test.rb`
-* Run the `map_pattern_test.rb` and solve the first exercise
-* Run the `map_test.rb` and solve the same exercise
-* Repeat for each matching pair of exercises
-* Commit your solutions after finishing each file
-
-## Setup
-
-[Fork](https://github.com/JumpstartLab/enums-exercises/fork) and clone the `enums-exercises` repository.
-
-```bash
-$ cd ~/turing/1module/
-$ git clone git@github.com:USERNAME/enums-exercises.git
-$ cd enums-exercises
-```
-
-Create a branch so that you're not changing `master`:
-
-```bash
-$ git checkout -b make-tests-pass
-```
-
-## Instructions
-
-After cloning the repository down, and checking out a new branch, we are ready
-to get started on these enumerables exercises.
-
-The goal of these exercises is to help you understand enumerables, both how
-they work and how they can be replicated through the use of the #each, the
-basis of all enumerables.
+__Recommended Exercise Order__
 
 You should perform the exercises in the order below:
 
@@ -91,6 +79,18 @@ You should perform the pattern test first, and then the test.
 For example, you should work on `map_pattern_test.rb` followed by `map_test.rb`
 Upon completing that, you should do `select_pattern_test.rb` and then
 `select_test.rb` and so forth.
+
+__Recommended Workflow__
+
+Here's how we recommend you work through the exercises:
+
+* Open your text editor with two panes (left and right)
+* In the left pane, open the pattern file like `map_pattern_test.rb`
+* In the right pane, open the matching file like `map_test.rb`
+* Run the `map_pattern_test.rb` and solve the first exercise
+* Run the `map_test.rb` and solve the same exercise
+* Repeat for each matching pair of exercises
+* Commit your solutions after finishing each file
 
 ## Contributing Patches
 

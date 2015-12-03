@@ -2,7 +2,7 @@
 
 ## Setup
 
-[Fork](https://github.com/JumpstartLab/enums-exercises/fork) and clone the `enums-exercises` repository.
+Clone this repository:
 
 ```bash
 $ cd ~/turing/1module/

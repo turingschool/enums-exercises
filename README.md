@@ -10,12 +10,6 @@ $ git clone https://github.com/turingschool/enums-exercises.git
 $ cd enums-exercises
 ```
 
-Create a branch so that you're not changing `master`:
-
-```bash
-$ git checkout -b make-tests-pass
-```
-
 ## How the Exercises are Organized
 
 These exercises are broken up by method -- each enumerable method will be covered by

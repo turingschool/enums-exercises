@@ -6,7 +6,7 @@
 
 ```bash
 $ cd ~/turing/1module/
-$ git clone git@github.com:USERNAME/enums-exercises.git
+$ git clone https://github.com/turingschool/enums-exercises.git
 $ cd enums-exercises
 ```
 

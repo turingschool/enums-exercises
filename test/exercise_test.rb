@@ -14,6 +14,7 @@ class ExerciseTest < Minitest::Test
   def test_exercise_starts_empty
     exercise = Exercise.new(:max)
     assert_equal [], exercise.problems
+    
   end
 
   def test_add_problem
